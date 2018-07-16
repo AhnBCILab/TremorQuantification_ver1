@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/Background"
     tools:context=".SignUpActivity">
 
     <ScrollView
@@ -12,17 +13,17 @@
         android:fitsSystemWindows="true">
 
         <LinearLayout
-            android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingTop="56dp"
-            android:paddingLeft="24dp"
-            android:paddingRight="24dp">
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:padding="72dp">
 
-            <ImageView android:src="@drawable/logo"
+            <ImageView
+                android:src="@drawable/logo"
                 android:layout_width="wrap_content"
-                android:layout_height="72dp"
-                android:layout_marginBottom="24dp"
+                android:layout_height="100dp"
+                android:layout_marginBottom="72dp"
                 android:layout_gravity="center_horizontal"
                 android:contentDescription="@string/imageCaption"/>
 
@@ -31,8 +32,9 @@
                 android:id="@+id/InputNameLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:layout_marginBottom="8dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="24dp"
+                app:hintTextAppearance="@style/TextLabel"
                 app:errorEnabled="true">
 
                 <android.support.design.widget.TextInputEditText
@@ -41,6 +43,7 @@
                     android:layout_height="wrap_content"
                     android:inputType="textCapWords"
                     android:textColor="@color/Primary"
+                    android:textSize="30sp"
                     android:hint="@string/Name" />
 
             </android.support.design.widget.TextInputLayout>
@@ -50,8 +53,9 @@
                 android:id="@+id/InputIdLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:layout_marginBottom="8dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="24dp"
+                app:hintTextAppearance="@style/TextLabel"
                 app:errorEnabled="true">
 
                 <android.support.design.widget.TextInputEditText
@@ -60,6 +64,7 @@
                     android:layout_height="wrap_content"
                     android:inputType="textCapWords"
                     android:textColor="@color/Primary"
+                    android:textSize="30sp"
                     android:hint="@string/ID" />
 
             </android.support.design.widget.TextInputLayout>
@@ -69,8 +74,9 @@
                 android:id="@+id/InputPasswordLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:layout_marginBottom="8dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="24dp"
+                app:hintTextAppearance="@style/TextLabel"
                 app:errorEnabled="true">
 
                 <android.support.design.widget.TextInputEditText
@@ -79,6 +85,7 @@
                     android:layout_height="wrap_content"
                     android:inputType="textPassword"
                     android:textColor="@color/Primary"
+                    android:textSize="30sp"
                     android:hint="@string/Password"/>
 
             </android.support.design.widget.TextInputLayout>
@@ -88,22 +95,23 @@
                 android:id="@+id/btnSignup"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="24dp"
-                android:layout_marginBottom="24dp"
+                android:layout_marginTop="72dp"
+                android:layout_marginBottom="72dp"
                 android:padding="12dp"
                 android:text="@string/createAccount"
                 android:textColor="@android:color/white"
+                android:textSize="24sp"
                 android:background="@color/Primary"/>
 
             <TextView
                 android:id="@+id/textLogin"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="24dp"
+                android:layout_marginBottom="72dp"
                 android:text="@string/backLogin"
                 android:gravity="center"
                 android:textColor="@color/SemiBoldColor"
-                android:textSize="16sp"/>
+                android:textSize="24sp"/>
 
         </LinearLayout>
     </ScrollView>

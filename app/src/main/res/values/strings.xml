@@ -10,4 +10,10 @@
     <string name="signUpMessage">No account yet? Create one</string>
     <string name="createAccount">Create Account</string>
     <string name="backLogin">Already a member? Login</string>
+
+    <!-- Main -->
+    <string name="spiralTest">Spiral Test</string>
+    <string name="patientList">Patient List</string>
+    <string name="spiralExplain">Test patient\'s tremor</string>
+    <string name="patientExplain">Management the patients</string>
 </resources>

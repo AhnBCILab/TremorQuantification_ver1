@@ -8,26 +8,25 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true">
-
         <activity
             android:name=".LoginActivity"
             android:theme="@style/NoTitleBar">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
-
         <activity
             android:name=".SignUpActivity"
             android:theme="@style/NoTitleBar" />
-
         <activity
             android:name=".MainActivity"
-            android:theme="@style/AppTheme"/>
-
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".patientListActivity"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".spiralTestListActivity"></activity>
     </application>
 
 </manifest>

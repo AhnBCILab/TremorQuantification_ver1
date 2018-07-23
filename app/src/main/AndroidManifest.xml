@@ -26,7 +26,12 @@
         <activity
             android:name=".patientListActivity"
             android:theme="@style/AppTheme" />
-        <activity android:name=".spiralTestListActivity"></activity>
+        <activity
+            android:name=".spiralTestListActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".spiralTestActivity"
+            android:theme="@style/AppTheme" />
     </application>
 
 </manifest>

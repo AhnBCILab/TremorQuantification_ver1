@@ -34,6 +34,10 @@ class LoginActivity : AppCompatActivity() {
             startActivity(Intent(this, SignUpActivity::class.java))
         }
 
+        gotoTestPage.setOnClickListener {
+            startActivity(Intent(this, spiralTestActivity::class.java))
+        }
+
         InputId.setOnFocusChangeListener { view, hasFocus ->
             run {
                 if (!hasFocus && !InputId.text.isBlank())

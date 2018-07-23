@@ -93,6 +93,13 @@
                 android:textColor="@color/SemiBoldColor"
                 android:textSize="24sp"/>
 
+            <TextView
+                android:id="@+id/gotoTestPage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Go to test page"
+                android:textSize="30sp"/>
+
         </LinearLayout>
     </ScrollView>
 

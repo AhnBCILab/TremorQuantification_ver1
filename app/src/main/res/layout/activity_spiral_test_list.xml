@@ -4,12 +4,32 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".spiralTestListActivity">
+    tools:context=".SpiralTestListActivity"
+    android:background="@color/Background">
 
-    <TextView
+    <ListView
+        android:id="@+id/patientList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <ViewStub
+        android:id="@+id/empty"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="SpiralTestListActivity"
-        android:textSize="30sp"/>
+        android:layout_gravity="center"
+        android:layout="@layout/empty"/>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/addBtn"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/add"
+        android:layout_margin="40dp"
+        android:scaleType="center"
+        android:tint="@android:color/white"
+        android:backgroundTint="@color/Primary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:borderWidth="0dp"/>
 
 </android.support.constraint.ConstraintLayout>

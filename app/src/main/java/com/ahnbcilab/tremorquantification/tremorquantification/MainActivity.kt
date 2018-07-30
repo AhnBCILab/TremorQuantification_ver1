@@ -12,11 +12,11 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         spiralTestBtn.setOnClickListener {
-            startActivity(Intent(this, spiralTestListActivity::class.java))
+            startActivity(Intent(this, SpiralTestListActivity::class.java))
         }
 
         patientListBtn.setOnClickListener {
-            startActivity(Intent(this, patientListActivity::class.java))
+            startActivity(Intent(this, PatientListActivity::class.java))
         }
     }
 }

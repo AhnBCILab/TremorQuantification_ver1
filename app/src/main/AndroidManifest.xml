@@ -24,9 +24,11 @@
             android:name=".MainActivity"
             android:theme="@style/AppTheme" />
         <activity
-            android:name=".patientListActivity"
+            android:name=".PatientListActivity"
             android:theme="@style/AppTheme" />
-        <activity android:name=".spiralTestListActivity"></activity>
+        <activity
+            android:name=".SpiralTestListActivity"
+            android:theme="@style/AppTheme" />
     </application>
 
 </manifest>

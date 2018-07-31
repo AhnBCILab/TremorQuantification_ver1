@@ -19,11 +19,16 @@ import kotlinx.android.synthetic.main.add_patient_dialog.*
 
 class SpiralTestListActivity : AppCompatActivity() {
 
+    companion object {
+        lateinit var adapter: PatientAdapter
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_spiral_test_list)
 
-        patientList.adapter = PatientAdapter(this, DataController.getDataList())
+        SpiralTestListActivity.adapter = PatientAdapter(this, DataController.getDataList())
+        patientList.adapter = SpiralTestListActivity.adapter
         patientList.emptyView = empty
 
         addBtn.setOnClickListener {
@@ -33,12 +38,16 @@ class SpiralTestListActivity : AppCompatActivity() {
     }
 }
 
-private class PatientAdapter(context: Context, val listItem: ArrayList<PatientData>) : BaseAdapter() {
+class PatientAdapter(context: Context, val listItem: ArrayList<PatientData>) : BaseAdapter() {
     private val mInflator: LayoutInflater = LayoutInflater.from(context)
 
     private inner class ViewHolder {
         lateinit var name: TextView
         lateinit var description: TextView
+    }
+
+    fun add(data: PatientData) {
+        DataController.addData(data)
     }
 
     override fun getCount(): Int {
@@ -63,6 +72,7 @@ private class PatientAdapter(context: Context, val listItem: ArrayList<PatientDa
             holder = ViewHolder()
             holder.name = view.findViewById(R.id.patientName) as TextView
             holder.description = view.findViewById(R.id.patientDescription) as TextView
+            view.tag = holder
         }
         else {
             view = convertView
@@ -100,7 +110,7 @@ private class CustomAddDialog(context: Context) : Dialog(context) {
                     if (addDialogDescription.text.isNotBlank())
                         newData.description = addDialogDescription.text.toString()
 
-                    DataController.addData(newData)
+                    SpiralTestListActivity.adapter.add(newData)
                     dismiss()
 
                     val intent = Intent(context, SpiralTestActivity::class.java)

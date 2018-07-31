@@ -20,7 +20,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Test Patient"
-                android:textSize="40sp"
+                android:textSize="25sp"
                 android:textColor="@android:color/black"
                 android:textStyle="bold"/>
 
@@ -29,7 +29,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Test Explanation"
-                android:textSize="25sp"/>
+                android:textSize="20sp"/>
         </LinearLayout>
 
         <View
@@ -45,15 +45,15 @@
             android:orientation="vertical">
 
             <ImageView
-                android:layout_width="60dp"
-                android:layout_height="60dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
                 android:src="@drawable/assignment"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Test"
-                android:textSize="20sp"/>
+                android:textSize="15sp"/>
 
         </LinearLayout>
     </LinearLayout>

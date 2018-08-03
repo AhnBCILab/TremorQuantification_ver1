@@ -16,4 +16,17 @@
     <string name="patientList">Patient List</string>
     <string name="spiralExplain">Test patient\'s tremor</string>
     <string name="patientExplain">Management the patients</string>
+
+    <!-- Written consent -->
+    <string name="demoText">
+        &#160;<b>Lorem ipsum</b> dolor sit amet, consectetur adipiscing elit. Donec pretium, lectus sit amet finibus blandit, leo libero ultricies ipsum, vitae volutpat nulla mi in massa. Vivamus finibus consectetur mi, ut imperdiet lorem vehicula eleifend. Phasellus blandit vel dolor at consectetur. Integer sit amet efficitur risus, vitae commodo est. In pulvinar pellentesque elementum. In sit amet lorem sagittis, feugiat tortor sed, mollis velit. Nam ut vestibulum magna. Sed viverra malesuada ligula, sed porta augue pellentesque in. Maecenas consectetur nunc non porta semper. Quisque molestie ex at faucibus placerat. Cras quis pellentesque dui. In malesuada purus eget lacus elementum, eu rhoncus mauris egestas. Nam metus orci, consequat et nulla vitae, mollis ullamcorper eros.\n
+        Donec et nulla in tellus posuere euismod gravida ac erat. Curabitur felis ipsum, hendrerit sit amet eros ut, venenatis pharetra neque. Nullam non varius felis, non dapibus nibh. Aenean neque elit, viverra ut nunc et, euismod dictum felis. Aenean nisi nisl, molestie eget lorem gravida, porta ultricies est. Nunc fermentum sodales augue, eget bibendum magna pellentesque nec. Donec magna lacus, bibendum eu ex sed, fermentum lobortis nisl. Sed vitae accumsan risus. Praesent pulvinar orci et ante semper, sed porta est scelerisque. Nulla ullamcorper molestie tincidunt. Morbi porta condimentum imperdiet. Suspendisse potenti. Aenean fermentum aliquet dapibus. Sed id felis euismod, consectetur augue non, ultricies libero. Vestibulum sollicitudin, nunc fringilla aliquet dignissim, ante urna vulputate mi, nec pretium est elit quis libero.\n
+        Donec id velit ut eros bibendum lobortis. Mauris mollis tempus risus vitae gravida. In vestibulum odio vitae placerat posuere. Proin ut sagittis mauris. Mauris porttitor vitae sem ut cursus. Morbi maximus enim ultricies, semper sem vitae, sollicitudin orci. Quisque eu tincidunt nisi, id sodales dolor. Etiam vitae dolor vitae neque egestas pulvinar sit amet id lectus.\n
+        Nam nunc neque, posuere elementum vestibulum non, faucibus sit amet turpis. Praesent sit amet urna purus. In sit amet ligula dapibus, vulputate nisi sit amet, ultrices velit. Etiam fringilla est a libero auctor, vitae pellentesque tellus fermentum. Etiam fermentum odio cursus erat dignissim posuere. Sed mollis felis ac nisl vehicula, in fermentum nunc pharetra. Mauris eu metus feugiat, consequat ipsum sed, posuere tortor. Cras feugiat vestibulum ultrices.\n
+        Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi hendrerit venenatis cursus. Donec et mi consectetur, mollis orci in, tempus sapien. Mauris in ex sapien. Donec pretium auctor tincidunt. Mauris ullamcorper mi placerat tellus tincidunt, vitae auctor nulla volutpat. Nullam volutpat ipsum non ex posuere tincidunt. Phasellus blandit auctor feugiat. Pellentesque ultricies aliquet leo, et dignissim turpis euismod cursus. Quisque non ornare ex, eget suscipit eros.\n
+    </string>
+    <string name="acceptText">&#160;본인은 개인정보 수집 및 활용 동의서와 연구 동의서를 충분히 읽고 숙지하였으며, 이를 동의합니다.</string>
+    <string name="agree">동의합니다</string>
+    <string name="disagree">동의하지 않습니다</string>
+    <string name="test">검사하기</string>
 </resources>

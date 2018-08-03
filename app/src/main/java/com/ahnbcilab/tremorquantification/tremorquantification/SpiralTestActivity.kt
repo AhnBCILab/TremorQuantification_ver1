@@ -3,14 +3,13 @@ package com.ahnbcilab.tremorquantification.tremorquantification
 import android.graphics.Paint
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
 import android.content.Context
 import android.graphics.Canvas
-import android.graphics.Path
 import android.os.SystemClock
 import android.util.TypedValue
 import android.view.MotionEvent
 import android.widget.TextView
+import com.ahnbcilab.tremorquantification.functions.Drawable
 import kotlinx.android.synthetic.main.activity_spiral_test.*
 
 class SpiralTestActivity : AppCompatActivity() {
@@ -26,13 +25,11 @@ class SpiralTestActivity : AppCompatActivity() {
         layout.addView(view)
     }
 
-    inner class MyView(context: Context) : View(context) {
-        private val paint = Paint()
-        private val path = Path()
-        val timerLayout = timer
-        var count: Int = 0
-        var flag: Boolean = false
-        var time: Long = 0
+    inner class MyView(context: Context) : Drawable(context) {
+        private val timerLayout = timer
+        private var count: Int = 0
+        private var flag: Boolean = false
+        private var time: Long = 0
 
         private var location: IntArray = intArrayOf(0, 0)
 

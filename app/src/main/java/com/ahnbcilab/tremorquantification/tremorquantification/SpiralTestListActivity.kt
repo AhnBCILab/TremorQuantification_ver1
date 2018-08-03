@@ -113,7 +113,7 @@ private class CustomAddDialog(context: Context) : Dialog(context) {
                     SpiralTestListActivity.adapter.add(newData)
                     dismiss()
 
-                    val intent = Intent(context, SpiralTestActivity::class.java)
+                    val intent = Intent(context, WrittenConsentActivity::class.java)
                     intent.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY)
                     startActivity(context, intent, null)
                 }

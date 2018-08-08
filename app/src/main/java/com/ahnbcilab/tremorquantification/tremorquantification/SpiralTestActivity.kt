@@ -4,11 +4,14 @@ import android.graphics.Paint
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.content.Context
+import android.content.Intent
+import android.content.pm.ActivityInfo
 import android.graphics.Canvas
 import android.os.SystemClock
 import android.util.TypedValue
 import android.view.MotionEvent
 import android.widget.TextView
+import android.widget.Toast
 import com.ahnbcilab.tremorquantification.functions.Drawable
 import kotlinx.android.synthetic.main.activity_spiral_test.*
 
@@ -16,6 +19,7 @@ class SpiralTestActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE
         setContentView(R.layout.activity_spiral_test)
 
         val layout = canvasLayout
@@ -23,22 +27,25 @@ class SpiralTestActivity : AppCompatActivity() {
         val view = MyView(this)
 
         layout.addView(view)
+
+        resetBtn.setOnClickListener {
+            view.clearLayout()
+        }
+
+        cancelBtn.setOnClickListener {
+            val intent = Intent(this, SpiralTestListActivity::class.java)
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+            startActivity(intent)
+        }
+
+        nextBtn.setOnClickListener {
+            Toast.makeText(this, "Not implemented", Toast.LENGTH_LONG).show()
+        }
     }
 
     inner class MyView(context: Context) : Drawable(context) {
-        private val timerLayout = timer
-        private var count: Int = 0
         private var flag: Boolean = false
         private var time: Long = 0
-
-        private var location: IntArray = intArrayOf(0, 0)
-
-        init {
-            paint.style = Paint.Style.STROKE
-            paint.strokeWidth = 8f
-
-            canvasLayout.getLocationOnScreen(location)
-        }
 
         override fun onDraw(canvas: Canvas) {
             canvas.drawPath(path, paint)
@@ -57,32 +64,12 @@ class SpiralTestActivity : AppCompatActivity() {
                     path.moveTo(x, y)
                 }
                 MotionEvent.ACTION_MOVE -> {
-                    val newTime = TextView(context)
-                    newTime.setTextSize(TypedValue.COMPLEX_UNIT_SP, 30.toFloat())
-                    newTime.text = getTimeOut()
-                    timerLayout.addView(newTime)
-
-                    val newPath = TextView(context)
-                    newPath.setTextSize(TypedValue.COMPLEX_UNIT_SP, 30.toFloat())
-                    newPath.text = getPathString(x, y)
-                    timerLayout.addView(newPath)
-
                     path.lineTo(x, y)
                 }
             }
 
             invalidate()
             return true
-        }
-
-        private fun getTimeOut(): String {
-            val outTime: Long = SystemClock.elapsedRealtime() - time
-            count++
-            return String.format("%d\t%02d:%02d:%02d", count, outTime / 1000 / 60, (outTime / 1000) % 60, (outTime % 1000) / 10)
-        }
-
-        private fun getPathString(x: Float, y: Float): String {
-            return String.format("x: %d, y: %d", x.toInt() - location[0], y.toInt() - location[1])
         }
     }
 }

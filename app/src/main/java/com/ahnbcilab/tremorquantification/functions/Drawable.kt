@@ -4,18 +4,22 @@ import android.content.Context
 import android.graphics.*
 import android.view.MotionEvent
 import android.view.View
+import java.io.File
+import java.io.FileOutputStream
 
 abstract class Drawable(context: Context) : View(context) {
     protected val path = Path()
     protected val paint = Paint()
-    protected val bitmapPaint = Paint(Paint.DITHER_FLAG)
+    protected val bitmapPaint = Paint()
 
     protected lateinit var bitmap: Bitmap
     protected lateinit var canvas: Canvas
 
     init {
         paint.style = Paint.Style.STROKE
-        paint.strokeWidth = 8f
+        paint.strokeWidth = 5f
+        bitmapPaint.style = paint.style
+        bitmapPaint.strokeWidth = paint.strokeWidth
     }
 
     override fun onSizeChanged(w: Int, h: Int, oldw: Int, oldh: Int) {
@@ -42,8 +46,25 @@ abstract class Drawable(context: Context) : View(context) {
         return true
     }
 
-    fun clear() {
+    fun clearLayout() {
         path.reset()
         bitmap.eraseColor(Color.TRANSPARENT)
+    }
+
+    fun saveAsJPG(view: View, path: String, filename:String) {
+        canvas.drawColor(Color.WHITE)
+        view.draw(canvas)
+        val realPath = File(path)
+
+        if (!realPath.exists())
+            realPath.mkdirs()
+        try {
+            val outputStream = FileOutputStream(File("$realPath/$filename"))
+            bitmap.compress(Bitmap.CompressFormat.JPEG, 100, outputStream)
+            outputStream.close()
+        } catch (e: Exception) {
+            e.printStackTrace()
+        }
+        canvas.drawColor(Color.argb(0, 255, 255, 255))
     }
 }

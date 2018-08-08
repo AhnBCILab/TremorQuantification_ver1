@@ -19,6 +19,8 @@ class WrittenConsentActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_written_consent)
 
+        val patientId = intent.extras.getInt("patientId")
+
         val drawView = Draw(this)
         signature.addView(drawView)
 
@@ -33,7 +35,7 @@ class WrittenConsentActivity : AppCompatActivity() {
                 }
                 R.id.disagree1 -> {
                     finalAgree.visibility = View.GONE
-                    drawView.clear()
+                    drawView.clearLayout()
                     btnDeactivate(this)
                 }
             }
@@ -47,7 +49,7 @@ class WrittenConsentActivity : AppCompatActivity() {
                 }
                 R.id.disagree2 -> {
                     finalAgree.visibility = View.GONE
-                    drawView.clear()
+                    drawView.clearLayout()
                     btnDeactivate(this)
                 }
             }
@@ -55,6 +57,7 @@ class WrittenConsentActivity : AppCompatActivity() {
 
         goToTest.setOnClickListener {
             // Save patient's signature
+            drawView.saveAsJPG(drawView, this.filesDir.path + "/signatures", "${patientId}_${System.currentTimeMillis()}.jpg")
 
             val intent = Intent(this, SpiralTestActivity::class.java)
             intent.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY)

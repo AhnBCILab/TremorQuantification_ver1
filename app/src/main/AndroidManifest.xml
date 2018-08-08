@@ -31,7 +31,7 @@
             android:theme="@style/AppTheme" />
         <activity
             android:name=".SpiralTestActivity"
-            android:theme="@style/AppTheme" />
+            android:theme="@style/NoActionBar" />
         <activity
             android:name=".WrittenConsentActivity"
             android:theme="@style/AppTheme" />

@@ -54,7 +54,7 @@ class SpiralTestListActivity : AppCompatActivity() {
     inner class PatientAdapter(context: Context) : BaseAdapter() {
         private val mInflator: LayoutInflater = LayoutInflater.from(context)
         val db = DBController.PatientDataDbHelper(context)
-        private val listItem: Array<PatientData> = db.select(null, false, null, null, DBController.PatientDataDB.COLUMN_PATIENT_NAME)
+        private var listItem: Array<PatientData> = db.select(null, false, null, null, DBController.PatientDataDB.COLUMN_PATIENT_NAME)
 
         private inner class ViewHolder {
             lateinit var id: TextView
@@ -64,6 +64,7 @@ class SpiralTestListActivity : AppCompatActivity() {
 
         fun add(data: PatientData) {
             db.insert(data)
+            listItem = db.select(null, false, null, null, DBController.PatientDataDB.COLUMN_PATIENT_NAME)
         }
 
         override fun getCount(): Int {
@@ -135,6 +136,8 @@ class SpiralTestListActivity : AppCompatActivity() {
 
                         val intent = Intent(context, WrittenConsentActivity::class.java)
                         intent.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY)
+                        val item = adapter.getItem(adapter.count) as PatientData
+                        intent.putExtra("patientId", item.id)
                         startActivity(context, intent, null)
                     }
                 }

@@ -46,8 +46,9 @@ abstract class Drawable(context: Context) : View(context) {
         return true
     }
 
-    fun clearLayout() {
-        path.reset()
+    open fun clearLayout() {
+        path.rewind()
+        invalidate()
         bitmap.eraseColor(Color.TRANSPARENT)
     }
 

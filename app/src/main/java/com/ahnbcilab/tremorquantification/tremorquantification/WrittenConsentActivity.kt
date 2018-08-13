@@ -56,11 +56,15 @@ class WrittenConsentActivity : AppCompatActivity() {
         }
 
         goToTest.setOnClickListener {
+            val date: String = SimpleDateFormat("yyyyMMdd_HH_mm").format(Calendar.getInstance().time)
+            println(date)
             // Save patient's signature
-            drawView.saveAsJPG(drawView, this.filesDir.path + "/signatures", "${patientId}_${System.currentTimeMillis()}.jpg")
+            drawView.saveAsJPG(drawView, this.filesDir.path + "/signatures", "${patientId}_$date.jpg")
 
             val intent = Intent(this, SpiralTestActivity::class.java)
             intent.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY)
+            intent.putExtra("patientId", patientId)
+            intent.putExtra("filename", date)
             ContextCompat.startActivity(this, intent, null)
         }
     }

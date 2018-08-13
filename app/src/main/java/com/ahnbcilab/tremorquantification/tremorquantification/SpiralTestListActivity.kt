@@ -117,18 +117,29 @@ class SpiralTestListActivity : AppCompatActivity() {
             window.setBackgroundDrawable(ColorDrawable(android.graphics.Color.TRANSPARENT))
             setContentView(R.layout.add_patient_dialog)
 
+            var sex: Int? = null
+
             addDialogCancel.setOnClickListener {
                 dismiss()
+            }
+
+            addDialogSexLayout.setOnCheckedChangeListener { _, checkedId ->
+                when (checkedId) {
+                    R.id.male -> sex = PatientData.MALE
+                    R.id.disagree1 -> sex = PatientData.FEMALE
+                }
             }
 
             addDialogAdd.setOnClickListener {
                 when {
                     addDialogName.text.isBlank() -> addDialogNameLayout.error = "Enter the name"
                     addDialogBirth.text.isBlank() -> addDialogBirthLayout.error = "Enter the birth"
+                    sex == null -> addDialogNameLayout.error = "Enter the sex"
                     else -> {
                         val newData = PatientData(
                                 addDialogName.text.toString(),
                                 addDialogBirth.text.toString().toInt(),
+                                sex!!,
                                 addDialogDescription.text.toString())
 
                         adapter.add(newData)

@@ -11,16 +11,18 @@ object DBController {
     object PatientDataDB : BaseColumns {
         const val TABLE_NAME = "patient"
         const val COLUMN_PATIENT_NAME = "name"
+        const val COLUMN_SEX = "sex"
         const val COLUMN_BIRTH_YEAR = "birth"
         const val COLUMN_DESCRIPTION = "description"
     }
 
     private const val SQL_CREATE_PATIENT_DATA =
-            "CREATE TABLE ${PatientDataDB.TABLE_NAME} (" +
-                    "${BaseColumns._ID} INTEGER PRIMARY KEY," +
-                    "${PatientDataDB.COLUMN_PATIENT_NAME} VARCHAR(10) NOT NULL," +
-                    "${PatientDataDB.COLUMN_BIRTH_YEAR} CHAR(4) NOT NULL," +
-                    "${PatientDataDB.COLUMN_DESCRIPTION} TEXT)"
+        "CREATE TABLE ${PatientDataDB.TABLE_NAME} (" +
+            "${BaseColumns._ID} INTEGER PRIMARY KEY," +
+            "${PatientDataDB.COLUMN_PATIENT_NAME} VARCHAR(10) NOT NULL," +
+            "${PatientDataDB.COLUMN_SEX} INTEGER NOT NULL," +
+            "${PatientDataDB.COLUMN_BIRTH_YEAR} CHAR(4) NOT NULL," +
+            "${PatientDataDB.COLUMN_DESCRIPTION} TEXT)"
 
     private const val SQL_DELETE_PATIENT_DATA =
             "DROP TABLE IF EXISTS ${PatientDataDB.TABLE_NAME}"
@@ -50,6 +52,7 @@ object DBController {
 
             val values = ContentValues().apply {
                 put(PatientDataDB.COLUMN_PATIENT_NAME, data.name)
+                put(PatientDataDB.COLUMN_SEX, data.sex)
                 put(PatientDataDB.COLUMN_BIRTH_YEAR, data.birth)
                 put(PatientDataDB.COLUMN_DESCRIPTION, data.description)
             }
@@ -88,10 +91,11 @@ object DBController {
 
             if (projection == null) {
                 project = arrayOf(
-                        BaseColumns._ID,
-                        PatientDataDB.COLUMN_PATIENT_NAME,
-                        PatientDataDB.COLUMN_BIRTH_YEAR,
-                        PatientDataDB.COLUMN_DESCRIPTION)
+                    BaseColumns._ID,
+                    PatientDataDB.COLUMN_PATIENT_NAME,
+                    PatientDataDB.COLUMN_SEX,
+                    PatientDataDB.COLUMN_BIRTH_YEAR,
+                    PatientDataDB.COLUMN_DESCRIPTION)
             }
             else
                 project = projection
@@ -114,9 +118,10 @@ object DBController {
             ).run {
                 while (moveToNext()) {
                     data.add(data.size, PatientData(
-                            getString(getColumnIndexOrThrow(PatientDataDB.COLUMN_PATIENT_NAME)),
-                            getString(getColumnIndexOrThrow(PatientDataDB.COLUMN_BIRTH_YEAR)).toInt(),
-                            getString(getColumnIndexOrThrow(PatientDataDB.COLUMN_DESCRIPTION))
+                        getString(getColumnIndexOrThrow(PatientDataDB.COLUMN_PATIENT_NAME)),
+                        getString(getColumnIndexOrThrow(PatientDataDB.COLUMN_BIRTH_YEAR)).toInt(),
+                        getString(getColumnIndexOrThrow(PatientDataDB.COLUMN_SEX)).toInt(),
+                        getString(getColumnIndexOrThrow(PatientDataDB.COLUMN_DESCRIPTION))
                     ).apply {
                         id = getLong(getColumnIndexOrThrow(BaseColumns._ID)).toInt()
                     })
@@ -136,10 +141,10 @@ object DBController {
             val selectionArgs = arrayOf(string)
 
             db.update(
-                    PatientDataDB.TABLE_NAME,
-                    values,
-                    selection,
-                    selectionArgs
+                PatientDataDB.TABLE_NAME,
+                values,
+                selection,
+                selectionArgs
             )
         }
 
@@ -148,5 +153,3 @@ object DBController {
         }
     }
 }
-
-// SELECT COUNT(*) FROM TABLE_NAME;

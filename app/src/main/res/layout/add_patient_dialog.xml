@@ -33,9 +33,36 @@
             android:inputType="text"
             android:textColor="@color/Primary"
             android:textSize="30sp"
-            android:hint="@string/Name" />
+            android:hint="Name" />
 
     </android.support.design.widget.TextInputLayout>
+
+    <RadioGroup
+        android:id="@+id/addDialogSexLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:paddingEnd="20dp">
+
+        <RadioButton
+            android:id="@+id/male"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:layout_weight="1"
+            android:text="Male"
+            android:textSize="20sp"/>
+
+        <RadioButton
+            android:id="@+id/female"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Female"
+            android:textSize="20sp" />
+    </RadioGroup>
 
     <android.support.design.widget.TextInputLayout
         android:id="@+id/addDialogBirthLayout"
@@ -89,7 +116,7 @@
             android:layout_height="0dp"
             android:layout_weight="1" />
 
-        <Button
+        <android.widget.Button
             android:id="@+id/addDialogCancel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -114,4 +141,5 @@
             android:layout_weight="1" />
 
     </LinearLayout>
+
 </LinearLayout>

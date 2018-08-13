@@ -16,8 +16,8 @@ import java.io.File
 import java.io.PrintWriter
 
 class SpiralTestActivity : AppCompatActivity() {
-    private val patientId = intent.extras.getInt("patientId")
-    private val filename = intent.extras.getString("filename")
+    private val patientId: Int by lazy { intent.extras.getInt("patientId") }
+    private val filename: String by lazy { intent.extras.getString("filename") }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

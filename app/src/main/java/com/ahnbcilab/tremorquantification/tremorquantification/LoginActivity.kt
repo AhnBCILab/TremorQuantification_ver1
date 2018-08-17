@@ -5,14 +5,20 @@ import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import com.ahnbcilab.tremorquantification.data.CurrentUserData
+import com.ahnbcilab.tremorquantification.functions.Authentication
+import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_login.*
 
 class LoginActivity : AppCompatActivity() {
 
-    val ID_NULL: Int = 1
-    val PW_NULL: Int = 2
-    val LOGIN_FAILED: Int = 3
-    val LOGIN_SUCCESS: Int = 4
+    companion object {
+        const val ID_NULL: Int = 1
+        const val PW_NULL: Int = 2
+        const val FUN_SUCCESS: Int = 3
+    }
+
+    private val mAuth = FirebaseAuth.getInstance()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -22,11 +28,6 @@ class LoginActivity : AppCompatActivity() {
             when (login(InputId.text.toString(), InputPassword.text.toString())) {
                 ID_NULL -> InputIdLayout.error = "Enter the Id"
                 PW_NULL -> InputPasswordLayout.error = "Enter the Password"
-                LOGIN_FAILED -> Toast.makeText(this, "Wrong Id or Password", Toast.LENGTH_SHORT).show()
-                LOGIN_SUCCESS -> {
-                    startActivity(Intent(this, MainActivity::class.java))
-                    finish()
-                }
             }
         }
 
@@ -49,26 +50,41 @@ class LoginActivity : AppCompatActivity() {
         }
     }
 
+    override fun onStart() {
+        super.onStart()
+
+        val currentUser = mAuth.currentUser
+        if (currentUser != null) {
+            CurrentUserData.user = currentUser
+            startActivity(Intent(this, MainActivity::class.java))
+            finish()
+        }
+    }
+
     fun login(id: String, pw: String): Int {
         when {
             id.isBlank() -> return ID_NULL
             pw.isBlank() -> return PW_NULL
         }
 
-        val flag = LOGIN_SUCCESS
         // ProgressDialog should be changed
         val dialog = ProgressDialog(this)
         dialog.setMessage("Authenticating...")
 
         dialog.show()
-        // Firebase..? Server..?
-        /*
-        if (loginfunction())
-            flag = LOGIN_SUCCESS
-        else
-            flag = LOGIN_FAILED
-        */
-        dialog.dismiss()
-        return flag
+
+        mAuth.signInWithEmailAndPassword(id, pw).addOnCompleteListener {
+            if (it.isSuccessful) {
+                CurrentUserData.user = mAuth.currentUser
+            } else {
+                Toast.makeText(this, "Authentication failed!\nError: ${it.exception?.message}", Toast.LENGTH_LONG).show()
+                CurrentUserData.user = null
+            }
+            dialog.dismiss()
+        }.addOnSuccessListener {
+            startActivity(Intent(this, MainActivity::class.java))
+            finish()
+        }
+        return FUN_SUCCESS
     }
 }

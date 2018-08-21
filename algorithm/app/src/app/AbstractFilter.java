@@ -1,0 +1,22 @@
+package app;
+
+public abstract class AbstractFilter implements SampleProvider {
+	protected final SampleProvider source;
+	protected int sampleSize;
+	
+	public AbstractFilter(SampleProvider source) {
+		this.source=source;
+		this.sampleSize=source.sampleSize();
+	}
+
+	@Override
+	public int sampleSize() {
+		return sampleSize;
+	}
+
+	@Override
+	public void fetchSample(double[] sample, int offset) {
+		source.fetchSample(sample, offset);
+		sampleSize = sample.length;
+	}
+}

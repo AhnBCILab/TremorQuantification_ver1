@@ -12,4 +12,8 @@ public class FillNull {
 		// TODO Auto-generated constructor stub
 	}
 
+	public FillNull() {
+		// TODO Auto-generated constructor stub
+	}
+
 }

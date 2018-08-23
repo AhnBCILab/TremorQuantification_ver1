@@ -17,7 +17,7 @@ public class Dataslice {
 	public List<Integer> Dataslice(int n) {	
 		List<Integer> session = new ArrayList<Integer>();
 		
-		for(int m = n; m > 50*3;) {
+		for(int m = n; m > 125*3;) {
 			int i = 0;
 			for (int k = m ; k != 1; i++)
 				k = k / 2;

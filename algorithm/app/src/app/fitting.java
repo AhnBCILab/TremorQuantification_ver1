@@ -10,8 +10,7 @@ import java.util.List;
 
 public class fitting {
 	
-	private int srate = 50;
-	private LowPassFilter lpf;
+	private int srate = 125;
 	
 	public static baseline bring(double[] x, double[] y, double[] t) {
 		return new baseline(x , y, t);}
@@ -29,9 +28,11 @@ public class fitting {
 		/* (not yet) find starting point */
 		
 		/* calculate distance */
-		
+		Filter ft = new Filter();
 		// data need to lowpass filter implemented at 4 kHz in Kotlin
-		List<Double> dataX= orgX; List<Double> dataY= orgY; 
+		List<Double> dataX= ft.LowPassFilter(orgX, 4,srate);
+		List<Double> dataY= ft.LowPassFilter(orgY, 4,srate); 
+		
 		double[] distance = new double[n];
 		for (int i = 0 ; i < n; i++) {
 			 distance[i] = (dataX.get(i) - objX[i]) +  (dataY.get(i) - objY[i]);

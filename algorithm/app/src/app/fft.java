@@ -52,6 +52,8 @@ public class fft {
         	}
         }
         
+        
+        
         return y;
     }
 
@@ -115,12 +117,12 @@ public class fft {
     	std  = cal.sd(result);
     	standard = mean + 2*std;
 
-    	int maxIndex = 0;
-    	for (int i = 0; i < result.length ; i ++) {
+    	int maxIndex = 1;
+    	for (int i = 1; i < index.length ; i ++) {
     		if (result[i] > result[maxIndex])
     			maxIndex = i ;
     	}
-        
+
     	amp = result[maxIndex]; hz = index[maxIndex];
         double[] ans = {mean, std, standard, amp, hz};
 		return ans;

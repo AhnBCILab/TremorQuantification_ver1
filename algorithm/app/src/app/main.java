@@ -15,16 +15,20 @@ import java.util.Scanner;
 public class main {
 
 	private static fft ft;
-	private static FillNull fn;
+	private static FillNull fn ;
 	private static fitting fg;
+	private static Filter filter;
 	private static double[] result;
-	
-	public static void main(String[] args) throws IOException {
-		// TODO Auto-generated method stub
-		int srate = 250;// sampling rate
-		double[][] resultx;
-		double[][] resulty;
+    private static final int srate = 125;	
 
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		double[][] resultx;		double[][] resulty;
+		Complex[] x;			Complex[] y; 
+        double[] fitting;
+		
+		filter = new Filter();
 		
 		/* read data - skip*/
 		List<Double> orgX = new ArrayList<Double>();
@@ -49,31 +53,57 @@ public class main {
 
         /* data setting - must do */
 		int n = time.size();
+		x = new Complex[n];		y = new Complex[n]; 
+		List<Double> fiX = new ArrayList<Double>();
+		List<Double> fiY = new ArrayList<Double>();
+	        
+		//pre-processing		
+		
+	    // data = fn.FillNull(x, y, time);	
+
+		fiX = filter.LowPassFilter(filter.HighPassFilter(orgX,3,srate),15,srate);	
+		fiY = filter.LowPassFilter(filter.HighPassFilter(orgY,3,srate),15,srate); 
+
+		for (int i = 0; i < n; i++) {
+			x[i] = new Complex(fiX.get(i), 0);
+			y[i] = new Complex(fiY.get(i), 0);
+		}
+/*		
+		FileOutputStream f = new FileOutputStream(new File("data.txt"));
+		ObjectOutputStream o = new ObjectOutputStream(f);
+		String s = Arrays.toString(x);
+		o.writeObject(s);
+		o.close();
+		f.close();
+	*/	
+		
+        //separate data 
 		int start = 1;
 		List<Integer> slice = new ArrayList<Integer>();
 		Dataslice ds = new Dataslice();
 		slice = ds.Dataslice(n);
-		int m = slice.size();
-	    // fn = new FillNull(x, y, time);
+		int m = slice.size();	
+
 		resultx = new double[m][5];
 		resulty = new double[m][5];
-		
         /* ******************************** FFT *****************************************/
 		for(int k = 0 ; k < m; k++) {
+			
 			int length = (int) Math.pow(2, slice.get(k));
-			Complex[] x = new Complex[length];		Complex[] y = new Complex[length]; 
+			Complex[] xi = new Complex[length];			Complex[] yi= new Complex[length]; 
 			for (int i = 0; i < length; i++) {
-				x[i] = new Complex(orgX.get(start+i), 0);
-				y[i] = new Complex(orgY.get(start+i), 0);
+				xi[i] = x[start + i];
+				yi[i] = y[start + i];
 			}
-
 			start = start + length; 
-			Complex[] fftx = ft.fft(x);        Complex[] ffty = ft.fft(y);
+			Complex[] fftx = ft.fft(xi);        Complex[] ffty = ft.fft(yi);
 			// change the data type: Complex ---> double 
         	double[] absfftx = new double[length/2]; 
-        	double[] absffty = new double[length/2];     
+        	double[] absffty = new double[length/2];   
+        	
     		absfftx[0] = 2*fftx[0].abs()/length;
     		absffty[0] = 2*ffty[0].abs()/length;
+    		
         	for(int i = 1; i < length/2; i++) {
         		absfftx[i] = 2*fftx[i].abs()/length;
         		absffty[i] = 2*ffty[i].abs()/length;
@@ -86,14 +116,7 @@ public class main {
         	
 			resultx[k] = ft.analysis(absfftx, index);
 			resulty[k] = ft.analysis(absffty, index); 
-	
-			FileOutputStream f = new FileOutputStream(new File("myObjects.txt"));
-			ObjectOutputStream o = new ObjectOutputStream(f);
-			String s = Arrays.toString(absfftx);
-			// Write objects to file
-			o.writeObject(s);
-			o.close();
-			f.close();
+	        
 	        
 		}// end FFT calculation
 		
@@ -112,7 +135,7 @@ public class main {
         				"	standard : " +  result[2]+ "	amp : " + result[3] + "	Hz : " + result[4]);
         /* ******************************** fitting *************************************/
         
-        double[] fitting = new double[2];
+        fitting = new double[2];
         fg = new fitting();
         fitting =  fg.fitting(orgX, orgY, time);
         System.out.println("fitting mean : "+ fitting[0] + "	fitting std : " + fitting[1]);

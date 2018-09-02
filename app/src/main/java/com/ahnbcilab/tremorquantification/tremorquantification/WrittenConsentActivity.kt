@@ -65,7 +65,7 @@ class WrittenConsentActivity : AppCompatActivity() {
             intent.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY)
             intent.putExtra("patientId", patientId)
             intent.putExtra("filename", date)
-            ContextCompat.startActivity(this, intent, null)
+            startActivity(intent)
         }
     }
 

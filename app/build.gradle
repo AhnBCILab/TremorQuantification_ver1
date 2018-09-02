@@ -19,6 +19,9 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+        debug {
+            debuggable true
+        }
     }
 }
 
@@ -37,6 +40,7 @@ dependencies {
 
     // Firebase
     implementation 'com.google.firebase:firebase-core:16.0.1'
+    implementation 'com.google.firebase:firebase-auth:16.0.3'
 }
 
 apply plugin: 'com.google.gms.google-services'

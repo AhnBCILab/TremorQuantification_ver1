@@ -83,8 +83,9 @@ class SpiralTestActivity : AppCompatActivity() {
                 println(e.message)
             }
 
-            val intent = Intent(this, SpiralTestListActivity::class.java)
-            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+            val intent = Intent(this, AnalysisActivity::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_NO_HISTORY
+            intent.putExtra("filename", "${patientId}_$filename.csv")
             startActivity(intent)
             Toast.makeText(this, "Not implemented", Toast.LENGTH_LONG).show()
         }

@@ -13,7 +13,7 @@ abstract class Drawable(context: Context) : View(context) {
     protected val bitmapPaint = Paint()
 
     protected lateinit var bitmap: Bitmap
-    protected lateinit var canvas: Canvas
+    public lateinit var canvas: Canvas
 
     init {
         paint.style = Paint.Style.STROKE

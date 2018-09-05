@@ -11,39 +11,44 @@ import java.util.List;
 public class fitting {
 	
 	private int srate = 125;
-	
+
+	public static int startX = 0;
+	public static int startY = 0;
+	public static double[] distance;
+
 	public static baseline bring(double[] x, double[] y, double[] t) {
-		return new baseline(x , y, t);}
-	
+		return new baseline(x , y, t);
+	}
+
 	public double[] fitting(List<Double> orgX, List<Double> orgY, List<Double> time){
 		double[] result = new double[2];
 		int n = time.size();
-		double[] objX = new double[n] ;		double[] objY = new double[n]  ; 		double[] t = new double[n]  ; 
+		double[] objX = new double[n] ;	double[] objY = new double[n] ;	double[] t = new double[n] ;
 		baseline base = bring(objX, objY, t);
 		base.setting(n);
 		objX = base.getArray1();
 		objY = base.getArray2();
 		//double[] t = base.getArray3();
-		
+
 		/* (not yet) find starting point */
-		
+
 		/* calculate distance */
 		Filter ft = new Filter();
 		// data need to lowpass filter implemented at 4 kHz in Kotlin
 		List<Double> dataX= ft.LowPassFilter(orgX, 4,srate);
-		List<Double> dataY= ft.LowPassFilter(orgY, 4,srate); 
-		
-		double[] distance = new double[n];
+		List<Double> dataY= ft.LowPassFilter(orgY, 4,srate);
+
+		distance = new double[n];
 		for (int i = 0 ; i < n; i++) {
-			 distance[i] = (dataX.get(i) - objX[i]) +  (dataY.get(i) - objY[i]);
-		 }
+			distance[i] = (dataX.get(i) - objX[i]) +  (dataY.get(i) - objY[i]);
+		}
 		Calculater cal = new Calculater();
 		result[0] = cal.mean(distance);
 		result[1]  = cal.sd(distance);
-		
+
 		return result;
-		 }		 
 	}
+}
 
 
 class baseline{
@@ -69,8 +74,8 @@ class baseline{
 		this.t = new double[length];  
 		for (int i = 0; i < length; i++){  
 		        this.t[i] = min + i * (max - min) / (length - 1); 
-		        this.baseX[i] = t[i]*Math.cos(2.5*t[i]);
-		        this.baseY[i] = t[i]*Math.sin(2.5*t[i]);
+		        this.baseX[i] = t[i]*Math.cos(2.5*t[i]*25)+fitting.startX;
+		        this.baseY[i] = t[i]*Math.sin(2.5*t[i]*25)+fitting.startY;
 		}  
 		return new baseline(baseX, baseY, t);
 	}

@@ -5,17 +5,23 @@ import android.os.Bundle
 import android.content.Context
 import android.content.Intent
 import android.content.pm.ActivityInfo
+import android.graphics.Canvas
+import android.graphics.Paint
+import android.graphics.Path
 import android.os.CountDownTimer
-import android.os.SystemClock
 import android.view.MotionEvent
+import android.view.View
+import android.view.animation.Animation
+import android.view.animation.AnimationUtils
 import android.widget.Toast
 import com.ahnbcilab.tremorquantification.data.CurrentUserData
 import com.ahnbcilab.tremorquantification.data.PathTraceData
 import com.ahnbcilab.tremorquantification.functions.Drawable
+import com.ahnbcilab.tremorquantification.functions.fitting
+import com.ahnbcilab.tremorquantification.tremorquantification.R.drawable.view
 import kotlinx.android.synthetic.main.activity_spiral_test.*
 import java.io.File
 import java.io.PrintWriter
-import java.util.stream.Collectors
 
 class SpiralTestActivity : AppCompatActivity() {
     private val patientId: Int by lazy { intent.extras.getInt("patientId") }
@@ -40,15 +46,18 @@ class SpiralTestActivity : AppCompatActivity() {
 
         val layout = canvasLayout
 
-        val view = MyView(this)
-
+        val view = DrawView(this)
+        val baseLine = baseView(this)
         layout.addView(view)
+        layout.addView(baseLine)
 
         resetBtn.setOnClickListener {
+            timer.cancel()
             view.clearLayout()
         }
 
         cancelBtn.setOnClickListener {
+            timer.cancel()
             onBackPressed()
         }
 
@@ -102,8 +111,9 @@ class SpiralTestActivity : AppCompatActivity() {
         super.onBackPressed()
     }
 
-    inner class MyView(context: Context) : Drawable(context) {
+    inner class DrawView(context: Context) : Drawable(context) {
         private var flag = false
+
         override fun onTouchEvent(event: MotionEvent): Boolean {
             currentX = event.x
             currentY = event.y
@@ -123,6 +133,32 @@ class SpiralTestActivity : AppCompatActivity() {
             super.clearLayout()
             pathTrace.clear()
             timer.cancel()
+        }
+    }
+
+    inner class baseView(context: Context): View(context) {
+        private val startX = this.resources.displayMetrics.widthPixels / 2
+        private val startY = this.resources.displayMetrics.heightPixels / 2
+
+        private val theta = FloatArray(720) { (it * (Math.PI / 180)).toFloat() }
+        private val basePath = Path()
+        private val basePaint = Paint()
+
+        init {
+            basePaint.style = Paint.Style.STROKE
+            basePaint.strokeWidth = 3f
+            basePaint.alpha = 50
+            basePaint.isAntiAlias = true
+            fitting.startX = startX
+            fitting.startY = startY
+        }
+
+        override fun onDraw(canvas: Canvas) {
+            basePath.moveTo(startX.toFloat(), startY.toFloat())
+            for (t in theta)
+                basePath.lineTo((t * Math.cos(2.5 * t) * 25 + startX).toFloat(), (t * Math.sin(2.5 * t) * 25 + startY).toFloat())
+
+            canvas.drawPath(basePath, basePaint)
         }
     }
 }

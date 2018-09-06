@@ -10,32 +10,29 @@ import java.util.List;
 
 public class fitting {
 	
-	private int srate = 125;
+	private int srate = 50;
 	
 	public static baseline bring(double[] x, double[] y, double[] t) {
 		return new baseline(x , y, t);}
 	
-	public double[] fitting(List<Double> orgX, List<Double> orgY, List<Double> time){
+	public double[] fitting(Complex[] orgX, Complex[] orgY, float[] frequency, double[] ti){
 		double[] result = new double[2];
-		int n = time.size();
+		int n = ti.length;
 		double[] objX = new double[n] ;		double[] objY = new double[n]  ; 		double[] t = new double[n]  ; 
 		baseline base = bring(objX, objY, t);
 		base.setting(n);
 		objX = base.getArray1();
 		objY = base.getArray2();
 		//double[] t = base.getArray3();
-		
-		/* (not yet) find starting point */
+
+		FilterBasedFFT fbf = new FilterBasedFFT();
+		double[] X = fbf.LowPassFilter(orgX, frequency, 3);
+		double[] Y = fbf.LowPassFilter(orgX, frequency, 3);
 		
 		/* calculate distance */
-		Filter ft = new Filter();
-		// data need to lowpass filter implemented at 4 kHz in Kotlin
-		List<Double> dataX= ft.LowPassFilter(orgX, 4,srate);
-		List<Double> dataY= ft.LowPassFilter(orgY, 4,srate); 
-		
 		double[] distance = new double[n];
 		for (int i = 0 ; i < n; i++) {
-			 distance[i] = (dataX.get(i) - objX[i]) +  (dataY.get(i) - objY[i]);
+			 distance[i] = Math.sqrt(Math.pow((X[i]- objX[i]),2) +  Math.pow((Y[i] - objY[i]),2));
 		 }
 		Calculater cal = new Calculater();
 		result[0] = cal.mean(distance);

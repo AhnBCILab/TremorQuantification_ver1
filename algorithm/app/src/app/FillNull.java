@@ -1,7 +1,7 @@
 package app;
 
 /*
- * If the user removes the pen from the pad during the task, the x,y data has an arbitrary value. 
+ * If the user removes the pen from the pad during the task, the x,y data has an arbitrary value(0,0). 
  * These arbitrary values ​​are filled with predictive (virtual) data based on the data before and after.
  * input  : x,y,time data 
  * output : virtual x,y, time data

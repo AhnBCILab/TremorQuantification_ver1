@@ -147,7 +147,7 @@ class SpiralTestListActivity : AppCompatActivity() {
 
                         val intent = Intent(context, WrittenConsentActivity::class.java)
                         intent.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY)
-                        val item = adapter.getItem(adapter.count) as PatientData
+                        val item = adapter.getItem(adapter.count - 1) as PatientData
                         intent.putExtra("patientId", item.id)
                         startActivity(context, intent, null)
                     }

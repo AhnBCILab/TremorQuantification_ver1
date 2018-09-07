@@ -24,7 +24,7 @@ public class main {
 	
 	public static void main(String[] args) throws IOException {
 		// TODO Auto-generated method stub
-		double[][] resultx;		double[][] resulty;	        double[][] fitting;
+		double[][] resultx;		double[][] resulty;	        double[][] fitting;		double[][] fildata;
 		Complex[] x;			Complex[] y; 
 		
 		/* read data - skip*/
@@ -53,11 +53,14 @@ public class main {
 		x = new Complex[n];		y = new Complex[n]; 
 		//pre-processing		
 		
-	    // data = fn.FillNull(x, y, time);	
+		fn = new FillNull();
+		fildata = new double[2][n];
+	    fildata[0] = fn.FillNull(orgX,n);	
+	    fildata[1] = fn.FillNull(orgY,n);	
 		
 		for (int i = 0; i < n; i++) {
-			x[i] = new Complex(orgX.get(i), 0);
-			y[i] = new Complex(orgY.get(i), 0);
+			x[i] = new Complex(fildata[0][i], 0);
+			y[i] = new Complex(fildata[1][i], 0);
 		}
 
         //separate data 
@@ -109,8 +112,8 @@ public class main {
 		/* ******************************** fitting *************************************/
 	        fitting[k] =  fg.fitting(fftx, ffty,index, ti);
 	        
-	        System.out.println(" x: amp : " + resultx[k][3] + "	Hz : " + resultx[k][4] +  " /y: amp : " + resulty[k][3] + "	Hz : " + resulty[k][4]);        
-	        System.out.println("section: distance mean : "+ fitting[k][0] + "	distance std : " + fitting[k][1]);
+	       System.out.println(" x: amp : " + resultx[k][3] + "	Hz : " + resultx[k][4] +  " /y: amp : " + resulty[k][3] + "	Hz : " + resulty[k][4]);        
+	      //  System.out.println("section: distance mean : "+ fitting[k][0] + "	distance std : " + fitting[k][1]);
 
 		}// end FFT calculation
 		

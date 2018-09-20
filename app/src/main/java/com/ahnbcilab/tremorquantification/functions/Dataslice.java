@@ -14,16 +14,25 @@ import java.util.List;
 
 public class Dataslice {
 	
-	public List<Integer> Dataslice(int n) {	
+	private int srate = 50;
+	
+	public List<Integer> Dataslice(int m) {	
 		List<Integer> session = new ArrayList<Integer>();
 		
-		for(int m = n; m > 125*3;) {
-			int i = 0;
-			for (int k = m ; k != 1; i++)
+		int n = m;
+		while(m > srate*3) {// input should be over the 3 seconds 
+			int k = n; int i;
+			
+			for (i = 0 ; k != 1; i++)
 				k = k / 2;
-			session.add(i);
-			m = (int)(m - Math.pow(2, i));
-			}
+			
+			int value = (int)Math.pow(2, i);
+		    if(value < srate*2) 
+				break;
+		    else session.add(i);
+			n = n - value;
+		}
+		
 		return session;
 	}
 }

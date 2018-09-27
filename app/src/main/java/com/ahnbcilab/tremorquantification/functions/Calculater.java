@@ -1,5 +1,7 @@
 package com.ahnbcilab.tremorquantification.functions;
 
+import java.lang.Math;
+
 public class Calculater {
 
     public double sum (double[] a) {

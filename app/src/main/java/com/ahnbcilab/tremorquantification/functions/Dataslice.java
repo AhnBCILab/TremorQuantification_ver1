@@ -2,6 +2,8 @@ package com.ahnbcilab.tremorquantification.functions;
 
 import java.util.ArrayList;
 import java.util.List;
+import com.ahnbcilab.tremorquantification.data.Complex;
+
 
 /*
  * In order to perform the FFT, the length of the data must be raised to the power of n. 
@@ -35,4 +37,27 @@ public class Dataslice {
 		
 		return session;
 	}
+
+
+	public Complex[] zeropadding(Complex[] input, int padlen) {
+		Complex[] output = new Complex[padlen];
+		Complex zero =  new Complex(0,0);
+		for (int i = 0; i < padlen ; i++) {
+			if(i < input.length)
+				output[i] = input[i];
+			else
+				output[i] = zero;
+		}
+		return output;
+	}
+
+	public int calN(int len) {
+		int i;
+		for ( i = 0 ; len != 1; i++)
+			len = len / 2;
+
+		int size = (int)Math.pow(2, i+1);
+		return size;
+	}
+
 }

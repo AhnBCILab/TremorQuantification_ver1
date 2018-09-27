@@ -9,6 +9,7 @@ package com.ahnbcilab.tremorquantification.functions;
 */
 
 import java.util.List;
+import com.ahnbcilab.tremorquantification.data.Complex;
 
 public class FilterBasedFFT {
 	

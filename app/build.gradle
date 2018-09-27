@@ -44,6 +44,9 @@ dependencies {
 
     // Graph
     implementation 'com.github.PhilJay:MPAndroidChart:v3.0.3'
+
+    implementation 'org.apache.commons:commons-math3:3.6.1'
+
 }
 
 apply plugin: 'com.google.gms.google-services'

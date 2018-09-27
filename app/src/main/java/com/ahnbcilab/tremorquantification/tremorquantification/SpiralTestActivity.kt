@@ -30,7 +30,7 @@ class SpiralTestActivity : AppCompatActivity() {
     private var currentX: Float = 0.toFloat()
     private var currentY: Float = 0.toFloat()
 
-    private val pathTrace: MutableList<PathTraceData> = mutableListOf()
+    private val pathTrace: MutableList<Path.TraceData> = mutableListOf()
     private val timer = object : CountDownTimer(Long.MAX_VALUE, 1000 / 60) {
         override fun onTick(millisUntilFinished: Long) {
             pathTrace.add(PathTraceData(currentX, currentY, (Long.MAX_VALUE - millisUntilFinished).toInt()))
@@ -156,7 +156,7 @@ class SpiralTestActivity : AppCompatActivity() {
         override fun onDraw(canvas: Canvas) {
             basePath.moveTo(startX.toFloat(), startY.toFloat())
             for (t in theta)
-                basePath.lineTo((t * Math.cos(2.5 * t) * 25 + startX).toFloat(), (t * Math.sin(2.5 * t) * 25 + startY).toFloat())
+                basePath.lineTo((t * Math.cos(2.5 * t) * 50 + startX).toFloat(), (t * Math.sin(2.5 * t) * 50 + startY).toFloat())
 
             canvas.drawPath(basePath, basePaint)
         }

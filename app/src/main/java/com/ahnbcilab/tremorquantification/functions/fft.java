@@ -1,9 +1,9 @@
 package com.ahnbcilab.tremorquantification.functions;
 
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
 import java.util.ArrayList;
+import com.ahnbcilab.tremorquantification.data.Complex;
 
 /*
  * calculating frequency information
@@ -109,31 +109,36 @@ public class fft {
     }
     
     public static double[] analysis(double[] result, float[] index) {
-    	double mean = 0; double std = 0; double standard = 0; double amp = 0; double hz = 0;
-    	int filterS = 0; int filterE = 0;
- 		
-    	Calculater cal = new Calculater();
-    	mean = cal.mean(result);
-    	std  = cal.sd(result);
-    	standard = mean + 2*std;
+        double mean = 0; double std = 0;  double amp = 0; double hz = 0;
+        int filterS = 0; int filterE = 0;
+        double[] session = new double[result.length];
 
-    	for (int i = 0; index[i] <= 3 ; i ++)
-    		filterS = i;
-    	for (int i = 0; index[i] <= 15 ; i ++)
-    		filterE = i;
-    
-    	int maxIndex = filterS;
-    		
-    	for (int i = filterS; i <= filterE; i ++) {
-    			if (result[i] >= result[maxIndex]) {
-    				maxIndex = i ;
-    			}
-    		}
+        for (int i = 0; index[i] <= 3 ; i ++)
+            filterS = i;
+        for (int i = 0; index[i] <= 15 ; i ++)
+            filterE = i;
 
-    	amp = result[maxIndex]; hz = index[maxIndex];
-        double[] ans = {mean, std, standard, amp, hz};
-		return ans;
+        int maxIndex = filterS;
+        for (int i = 0 ; i < result.length ; i++)
+        {
+            if ( i >= filterS & i <= filterE) {
+                if (result[i] >= result[maxIndex])
+                    maxIndex = i ;
+                session[i] = result[i];
+            }
+            else session[i] = 0;
+        }
 
+
+        amp = result[maxIndex]; hz = index[maxIndex];
+
+        Calculater cal = new Calculater();
+
+        mean = cal.mean(session);
+        std  = cal.sd(session);
+
+        double[] ans = {mean, std, amp, hz};
+        return ans;
     }
     
 }

@@ -1,6 +1,9 @@
 package com.ahnbcilab.tremorquantification.functions;
 
 import java.util.List;
+import java.lang.Math;
+import org.apache.commons.math3.stat.correlation.PearsonsCorrelation;
+import com.ahnbcilab.tremorquantification.data.Complex;
 
 /*
  * Calculate how closely the given line is drawn to match the given line.
@@ -19,7 +22,7 @@ public class fitting {
 		return new baseline(x , y, t);}
 	
 	public double[] fitting(Complex[] orgX, Complex[] orgY, float[] frequency, double[] ti){
-		double[] result = new double[2];
+		double[] result = new double[3];
 		int n = ti.length;
 		double[] objX = new double[n] ;		double[] objY = new double[n]  ; 		double[] t = new double[n]  ; 
 		baseline base = bring(objX, objY, t);
@@ -37,6 +40,8 @@ public class fitting {
 		for (int i = 0 ; i < n; i++) {
 			 distance[i] = Math.sqrt(Math.pow((X[i]- objX[i]),2) +  Math.pow((Y[i] - objY[i]),2));
 		 }
+		result[3]= (new PearsonsCorrelation().correlation(objX, X)+ new PearsonsCorrelation().correlation(objY,Y)) / 2;
+
 		Calculater cal = new Calculater();
 		result[0] = cal.mean(distance);
 		result[1]  = cal.sd(distance);
@@ -69,8 +74,8 @@ class baseline{
 		this.t = new double[length];  
 		for (int i = 0; i < length; i++){  
 		        this.t[i] = min + i * (max - min) / (length - 1); 
-		        this.baseX[i] = t[i]*Math.cos(2.5*t[i]*25)+fitting.startX;
-		        this.baseY[i] = t[i]*Math.sin(2.5*t[i]*25)+fitting.startY;
+		        this.baseX[i] = t[i]*Math.cos(2.5*t[i])*50+fitting.startX;
+		        this.baseY[i] = t[i]*Math.sin(2.5*t[i])*50+fitting.startY;
 		}  
 		return new baseline(baseX, baseY, t);
 	}

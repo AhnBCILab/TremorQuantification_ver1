@@ -78,7 +78,7 @@ class SpiralTestActivity : AppCompatActivity() {
             }
 
             val metaData= "${CurrentUserData.user?.uid},$patientId,$filename"
-            val path = File("${this.filesDir.path}/testData")
+            val path = File("${this.filesDir.path}/testData") // raw save to file dir(data/com.bcilab....)
             if (!path.exists()) path.mkdirs()
             val file = File(path, "${patientId}_$filename.csv")
             try {

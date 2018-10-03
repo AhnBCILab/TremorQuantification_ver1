@@ -76,7 +76,7 @@ public class main {
 		int m = slice.size();
 		int totalL = 0;
 
-		fitting = new double[m][2];
+		fitting = new double[m][3];
 		fg = new fitting();
 
 		/* ******************************** fitting *************************************/
@@ -139,7 +139,7 @@ public class main {
 			Result[j] = 0;
 			for(int i = 0; i < m ; i++) {
 				float ratio = (float)Math.pow(2, slice.get(i))/ (float)totalL;
-				Result[j] = Result[j] + (fitting[i][j - 4 ] + fitting[i][j - 4]) * ratio * 0.5;
+				Result[j] = Result[j] + fitting[i][j - 4 ] * ratio ;
 			}
 		}
         return Result;

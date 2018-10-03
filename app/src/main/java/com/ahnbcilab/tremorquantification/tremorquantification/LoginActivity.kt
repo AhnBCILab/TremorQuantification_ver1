@@ -9,6 +9,7 @@ import com.ahnbcilab.tremorquantification.data.CurrentUserData
 import com.ahnbcilab.tremorquantification.functions.Authentication
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_login.*
+import kotlin.jvm.java
 
 class LoginActivity : AppCompatActivity() {
 

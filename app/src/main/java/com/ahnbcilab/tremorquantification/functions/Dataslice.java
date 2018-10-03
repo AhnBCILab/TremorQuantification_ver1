@@ -2,6 +2,7 @@ package com.ahnbcilab.tremorquantification.functions;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.lang.Math;
 import com.ahnbcilab.tremorquantification.data.Complex;
 
 

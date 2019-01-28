@@ -12,13 +12,17 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.Window
 import android.widget.*
+import com.ahnbcilab.tremorquantification.Adapters.PatientCardAdapter
 import com.ahnbcilab.tremorquantification.controller.DBController
 import com.ahnbcilab.tremorquantification.data.PatientData
+import com.google.firebase.database.FirebaseDatabase
 import kotlinx.android.synthetic.main.activity_spiral_test_list.*
 import kotlinx.android.synthetic.main.add_patient_dialog.*
+import java.util.*
 
-class SpiralTestListActivity : AppCompatActivity() {
-
+class SpiralTestListActivity : AppCompatActivity(), Observer {
+    private var mPatientListAdapter: PatientCardAdapter? = null
+    //private lateinit var mPatientListAdapter: PatientCardAdapter
     private lateinit var adapter: PatientAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -26,15 +30,23 @@ class SpiralTestListActivity : AppCompatActivity() {
         setContentView(R.layout.activity_spiral_test_list)
 
         adapter = PatientAdapter(this)
-        patientList.adapter = adapter
-        patientList.emptyView = empty
+//////////////////////////////////////////////////////////////////////////////////////////////////
+        PatientModel
+        PatientModel.addObserver(this)
 
+        val dataList: ListView = findViewById(R.id.patient_list)
+
+        val data: ArrayList<Patient> = ArrayList()
+        mPatientListAdapter = PatientCardAdapter(this, R.layout.patient_list_item, data)
+        dataList.adapter = mPatientListAdapter
+////////////////////////////////////////////////////////////////////////////////////////////////
+        // list에서 +버튼 누르는 것
         addBtn.setOnClickListener {
             val dialog = CustomAddDialog(this)
             dialog.show()
         }
 
-        patientList.setOnItemClickListener { parent, view, position, id ->
+        patient_list.setOnItemClickListener { parent, view, position, id ->
             run {
                 val id = view.findViewById<TextView>(R.id.PatientId).text.toString().toInt()
                 val intent = Intent(this, WrittenConsentActivity::class.java)
@@ -44,6 +56,32 @@ class SpiralTestListActivity : AppCompatActivity() {
                 finish()
             }
         }
+    }
+
+    override fun update(p0: Observable?, p1: Any?) {
+        mPatientListAdapter?.clear()
+
+        val data = PatientModel.getData()
+        if(data != null) {
+            mPatientListAdapter?.clear()
+            mPatientListAdapter?.addAll(data)
+            mPatientListAdapter?.notifyDataSetChanged()
+        }
+    }
+
+    override fun onResume(){
+        super.onResume()
+        PatientModel.addObserver(this)
+    }
+
+    override fun onPause(){
+        super.onPause()
+        PatientModel.deleteObserver(this)
+    }
+
+    override fun onStop(){
+        super.onStop()
+        PatientModel.deleteObserver(this)
     }
 
     override fun onDestroy() {
@@ -82,7 +120,6 @@ class SpiralTestListActivity : AppCompatActivity() {
         override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
             val view: View
             val holder: ViewHolder
-
             if (convertView == null) {
                 view = mInflator.inflate(R.layout.patient_list_item, parent, false)
 
@@ -126,7 +163,7 @@ class SpiralTestListActivity : AppCompatActivity() {
             addDialogSexLayout.setOnCheckedChangeListener { _, checkedId ->
                 when (checkedId) {
                     R.id.male -> sex = PatientData.MALE
-                    R.id.disagree1 -> sex = PatientData.FEMALE
+                    R.id.female -> sex = PatientData.FEMALE
                 }
             }
 
@@ -138,11 +175,21 @@ class SpiralTestListActivity : AppCompatActivity() {
                     else -> {
                         val newData = PatientData(
                                 addDialogName.text.toString(),
-                                addDialogBirth.text.toString().toInt(),
                                 sex!!,
+                                addDialogBirth.text.toString().toInt(),
                                 addDialogDescription.text.toString())
 
                         adapter.add(newData)
+
+                        val name = addDialogName.text.toString()
+                        FirebaseDatabase.getInstance().reference.child("patient").child(name).setValue(newData).addOnCompleteListener {
+                            if (it.isSuccessful){
+                                Toast.makeText(applicationContext, "value uploaded successfully!", Toast.LENGTH_LONG).show()
+                            }else{
+                                println("Something went wrong when uploading value")
+                            }
+                        }
+
                         dismiss()
 
                         val intent = Intent(context, WrittenConsentActivity::class.java)

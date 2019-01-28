@@ -76,7 +76,7 @@ public class main {
 		int m = slice.size();
 		int totalL = 0;
 
-		fitting = new double[m][3];
+		fitting = new double[m][2];
 		fg = new fitting();
 
 		/* ******************************** fitting *************************************/
@@ -130,16 +130,16 @@ public class main {
 		resulty = ft.analysis(absffty, index);
 		// end FFT calculation
 
-		Result = new double[7];
+		Result = new double[6];
 		for(int j = 0; j < 4 ; j++) {
 			Result[j] = (resultx[j] + resulty[j]) * 0.5;
 		}
 
-		for(int j = 4; j <= 6 ; j++) {
+		for(int j = 4; j < 6 ; j++) {
 			Result[j] = 0;
 			for(int i = 0; i < m ; i++) {
 				float ratio = (float)Math.pow(2, slice.get(i))/ (float)totalL;
-				Result[j] = Result[j] + fitting[i][j - 4 ] * ratio ;
+				Result[j] = Result[j] + fitting[i][j - 4 ] * ratio;
 			}
 		}
         return Result;

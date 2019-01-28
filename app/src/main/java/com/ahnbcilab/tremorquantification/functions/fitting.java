@@ -22,7 +22,7 @@ public class fitting {
 		return new baseline(x , y, t);}
 	
 	public double[] fitting(Complex[] orgX, Complex[] orgY, float[] frequency, double[] ti){
-		double[] result = new double[3];
+		double[] result = new double[2];
 		int n = ti.length;
 		double[] objX = new double[n] ;		double[] objY = new double[n]  ; 		double[] t = new double[n]  ; 
 		baseline base = bring(objX, objY, t);
@@ -40,11 +40,11 @@ public class fitting {
 		for (int i = 0 ; i < n; i++) {
 			 distance[i] = Math.sqrt(Math.pow((X[i]- objX[i]),2) +  Math.pow((Y[i] - objY[i]),2));
 		 }
-		result[3]= (new PearsonsCorrelation().correlation(objX, X)+ new PearsonsCorrelation().correlation(objY,Y)) / 2;
+		//result[3]= (new PearsonsCorrelation().correlation(objX, X)+ new PearsonsCorrelation().correlation(objY,Y)) / 2;
 
 		Calculater cal = new Calculater();
-		result[0] = cal.mean(distance);
-		result[1]  = cal.sd(distance);
+		result[0] = cal.mean(distance)/n;
+		result[1]  = cal.sd(distance)/n;
 		
 		return result;
 		 }		 

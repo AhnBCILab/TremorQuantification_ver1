@@ -7,8 +7,10 @@
     <color name="WhiteGray">#CCCCCC</color>
     <color name="Background">#FCFCFC</color>
 
-    <color name="Primary">#1166E6</color>
-    <color name="Secondary">#9FC2F5</color>
+    <color name="Primary">#004e66</color>
+    <color name="Secondary">#fcbe32</color>
+    <color name="Third">#ff5f2e</color>
+    <color name="Fourth">#FCFCFC</color>
     <color name="SemiBoldColor">#70A3F0</color>
 
 </resources>

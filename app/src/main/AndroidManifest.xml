@@ -42,6 +42,21 @@
         <activity
             android:name=".ResultActivity"
             android:theme="@style/AppTheme" />
+        <activity
+            android:name=".SurveyMainActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".SurveyListActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".PersonalPatient"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".SubmitActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".SpiralResultActivity"
+            android:theme="@style/AppTheme" />
     </application>
 
 </manifest>

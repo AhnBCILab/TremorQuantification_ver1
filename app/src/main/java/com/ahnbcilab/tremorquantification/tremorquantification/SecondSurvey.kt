@@ -25,5 +25,4 @@ class SecondSurvey : Fragment() {
         return inflater.inflate(R.layout.fragment_second_survey, container, false)
     }
 
-
 }

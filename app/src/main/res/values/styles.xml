@@ -39,4 +39,16 @@
         <item name="android:textSize">24sp</item>
     </style>
 
+    <style name="survey">
+        <item name="android:textSize">15sp</item>
+        <item name="android:lineSpacingExtra">20sp</item>
+        <item name="android:padding"> 10dp </item>
+        <item name="android:paddingLeft"> 20dp </item>
+
+    </style>
+
+    <style name="fragment">
+        <item name="android:textSize">15sp</item>
+        <item name="android:gravity"> center_horizontal </item>
+    </style>
 </resources>

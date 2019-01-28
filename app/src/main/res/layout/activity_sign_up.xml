@@ -20,10 +20,9 @@
             android:padding="72dp">
 
             <ImageView
-                android:src="@drawable/logo"
+                android:src="@drawable/mainlogo"
                 android:layout_width="wrap_content"
-                android:layout_height="100dp"
-                android:layout_marginBottom="72dp"
+                android:layout_height="200dp"
                 android:layout_gravity="center_horizontal"
                 android:contentDescription="@string/imageCaption"/>
 
@@ -87,6 +86,26 @@
                     android:textColor="@color/Primary"
                     android:textSize="30sp"
                     android:hint="@string/Password"/>
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/InputPhoneLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="24dp"
+                app:hintTextAppearance="@style/TextLabel"
+                app:errorEnabled="true">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/InputPhone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword"
+                    android:textColor="@color/Primary"
+                    android:textSize="30sp"
+                    android:hint="@string/Phone"/>
 
             </android.support.design.widget.TextInputLayout>
 

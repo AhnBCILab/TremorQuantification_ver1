@@ -3,12 +3,215 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ThridTask">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+    <RelativeLayout android:id="@+id/RelativeLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
 
+            <TextView
+                android:id="@+id/session2title"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/Secondary"
+                android:text="Task"
+                android:textAlignment="center"
+                android:textColor="@color/Background"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentBottom="true"
+                android:textSize="20dp" />
+
+
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="50dp"
+                android:layout_margin="100dp"
+                android:focusable="true"
+                android:background="@color/Primary">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:background="#ffffff">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/PName"
+                        android:paddingTop="10dp"
+                        android:paddingLeft="30dp"
+                        android:textSize="30dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        />
+
+                    <TextView
+                        android:id="@+id/PAge"
+                        android:textSize="20dp"
+                        android:paddingLeft="30dp"
+                        android:text="Age : 43"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+
+                    <TextView
+                        android:id="@+id/PSex"
+                        android:paddingLeft="30dp"
+                        android:textSize="20dp"
+                        android:text="Sex : Male"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                       />
+
+                    <TextView
+                        android:id="@+id/Pdiscrip"
+                        android:paddingLeft="30dp"
+                        android:paddingBottom="10dp"
+                        android:textSize="20dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Period of treatment : 1 year "/>
+                  </LinearLayout>
+            </TableRow>
+
+             <TableRow
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent"
+                 android:layout_marginTop="10dp"
+                 android:layout_marginLeft="10dp"
+                 android:layout_marginRight="10dp"
+                 android:background="#ffffff">
+
+                 <TextView
+                     android:id="@+id/todate"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:paddingLeft="20dp"
+                     android:text="2018.11.11"
+                     android:textSize="30dp"/>
+             </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="#ffffff">
+
+
+                <TextView
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:layout_weight="1"
+                         android:paddingLeft="20dp"
+                         android:text="Drug"
+                         android:textSize="20dp"/>
+
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="#ffffff">
+                     <TextView
+                         style="fragment"
+                         android:id="@+id/drug1"
+                         android:layout_width="match_parent"
+                         android:gravity="center_horizontal"
+                         android:layout_height="wrap_content"
+                         android:layout_weight="7"
+                         android:textSize="20dp"
+                         android:text="Indenol" />
+                <EditText
+                    android:id="@+id/drugedit1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="2"
+                    android:inputType="number" />
+                <TextView
+                    style="fragment"
+                    android:layout_width="match_parent"
+                    android:gravity="left"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="mg" />
+            </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:padding="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="#ffffff">
+                    <TextView
+                        style="fragment"
+                        android:id="@+id/drug2"
+                        android:textSize="20dp"
+                        android:layout_width="match_parent"
+                        android:gravity="center_horizontal"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="7"
+                        android:text="Primidone" />
+                    <EditText
+                        android:id="@+id/drugedit2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ems="2"
+                        android:inputType="number" />
+                    <TextView
+                        style="fragment"
+                        android:layout_width="match_parent"
+                        android:gravity="left"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="mg" />
+                </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="#ffffff">
+                     <TextView
+                         style="fragment"
+                         android:id="@+id/todatastate"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:gravity="center_horizontal"
+                         android:layout_weight="1"
+                         android:textSize="20dp"
+                         android:text="Commnet" />
+
+
+                <EditText
+                    android:layout_weight="5"
+                    android:id="@+id/editText3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textMultiLine"
+                    android:lines="5"
+                    />
+
+            </TableRow>
+            </TableLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
 </FrameLayout>

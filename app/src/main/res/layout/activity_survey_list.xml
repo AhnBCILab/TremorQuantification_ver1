@@ -4,6 +4,33 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SurveyListActivity">
+    android:background="@color/Background"
+    tools:context=".SurveyListActivity"
+   >
+
+    <ListView
+        android:id="@+id/patientSurList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <ViewStub
+        android:id="@+id/Surempty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout="@layout/empty"/>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/SuraddBtn"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/add"
+        android:layout_margin="40dp"
+        android:scaleType="center"
+        android:tint="@android:color/white"
+        android:backgroundTint="@color/Primary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:borderWidth="0dp"/>
 
 </android.support.constraint.ConstraintLayout>

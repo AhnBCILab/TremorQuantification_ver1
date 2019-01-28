@@ -28,28 +28,18 @@
                 android:textSize="30sp"
                 android:textStyle="bold" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
-                android:layout_marginStart="10dp"
-                android:text="개인정보 제공 및 활용 동의서"
-                android:textColor="@color/Primary"
-                android:textSize="20sp" />
-
             <ScrollView
-                android:layout_width="match_parent"
-                android:layout_height="200dp"
+                android:layout_width="wrap_content"
+                android:layout_height="180dp"
                 android:background="@drawable/round_border"
                 android:padding="15dp">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/demoText"
-                    android:textSize="20sp" />
+                    android:text="@string/Text1"
+                    android:textSize="15sp" />
             </ScrollView>
-
             <RadioGroup
                 android:id="@+id/agree1Group"
                 android:layout_width="match_parent"
@@ -79,21 +69,21 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
                 android:layout_marginStart="10dp"
-                android:text="연구 동의서"
+                android:text="연구의 배경과 목적"
                 android:textColor="@color/Primary"
                 android:textSize="20sp" />
 
             <ScrollView
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
+                android:layout_height="150dp"
                 android:background="@drawable/round_border"
                 android:padding="15dp">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/demoText"
-                    android:textSize="20sp" />
+                    android:text="@string/Text2"
+                    android:textSize="15sp" />
             </ScrollView>
 
             <RadioGroup

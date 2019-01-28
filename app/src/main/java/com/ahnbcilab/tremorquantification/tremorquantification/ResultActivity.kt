@@ -1,35 +1,32 @@
 package com.ahnbcilab.tremorquantification.tremorquantification
 
-import android.app.PendingIntent.getActivity
-import android.content.Context
-import android.graphics.Canvas
-import android.graphics.Path
-import android.graphics.Typeface
+import android.content.Intent
+import android.content.pm.ActivityInfo
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
 import com.ahnbcilab.tremorquantification.functions.fitting
-import com.ahnbcilab.tremorquantification.tremorquantification.R.id.*
 import com.github.mikephil.charting.charts.LineChart
-import com.github.mikephil.charting.data.Entry
-import com.github.mikephil.charting.data.LineData
-import com.github.mikephil.charting.data.LineDataSet
 import com.github.mikephil.charting.interfaces.datasets.ILineDataSet
 import com.github.mikephil.charting.utils.ColorTemplate
-import com.github.mikephil.charting.utils.FileUtils
 import kotlinx.android.synthetic.main.activity_result.*
-import java.util.*
 import kotlin.collections.ArrayList
+import com.github.mikephil.charting.data.*
+
+
 
 class ResultActivity : AppCompatActivity() {
 
     private lateinit var mChart: LineChart
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE
         setContentView(R.layout.activity_result)
 
         val results = intent.extras.getDoubleArray("result")
+
+
 
         mChart = lineChart
         mChart.description.isEnabled = false
@@ -48,14 +45,17 @@ class ResultActivity : AppCompatActivity() {
 
 
 
-        mean.text = "Mean: ${results[0]}"
-        std.text = "Std: ${results[1]}"
-        standard.text = "Standard: ${results[2]}"
-        amp.text = "Amp: ${results[3]}"
-        Hz.text = "Hz: ${results[4]}"
-        fittingMean.text = "FittingMean: ${results[5]}"
-        fittingStd.text = "FittingStd: ${results[6]}"
+       // mean.text = "Mean: ${results[0]}"
+       // std.text = "Std: ${results[1]}"
+        //standard.text = "Standard: ${results[2]}"
+        amp.text = "Amp: ${results[2]}"
+        Hz.text = "Hz: ${results[3]}"
+        fittingMean.text = "Mean of Fitting distance: ${results[4]}"
+       // fittingStd.text = "FittingStd: ${results[5]}"
 
+        Gosurvey.setOnClickListener {
+            startActivity(Intent(this, SubmitActivity::class.java))
+        }
     }
 
     private fun getData(data: DoubleArray): LineData {
@@ -67,6 +67,9 @@ class ResultActivity : AppCompatActivity() {
         for ((index, value) in iter.withIndex())
             entry.add(Entry(index.toFloat(), value.toFloat()))
 
+//        val ds = ScatterDataSet()
+//        ds.color = ColorTemplate.VORDIPLOM_COLORS[3]
+//        sets.add(ds)
         val ds = LineDataSet(entry, "distance")
         ds.color = ColorTemplate.VORDIPLOM_COLORS[3]
         ds.setCircleColor(ColorTemplate.VORDIPLOM_COLORS[3])
@@ -74,7 +77,7 @@ class ResultActivity : AppCompatActivity() {
         ds.circleRadius = 3f
 
         sets.add(ds)
-
         return LineData(sets)
+//        return ScatterChart(sets)
     }
 }

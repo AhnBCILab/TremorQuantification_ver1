@@ -51,20 +51,22 @@ class SpiralTestActivity : AppCompatActivity() {
         layout.addView(view)
         layout.addView(baseLine)
 
+        // 그림 그릴 때, 다시 그리는 버튼
         resetBtn.setOnClickListener {
             timer.cancel()
             view.clearLayout()
         }
-
+        // 그림 그릴 때, 취소 누르는 버튼
         cancelBtn.setOnClickListener {
             timer.cancel()
             onBackPressed()
         }
-
+        // 그림 그리고 나서, 다음으로 넘어가는 버튼
         nextBtn.setOnClickListener {
             timer.cancel()
-            view.saveAsJPG(view, this.filesDir.path + "/spiralTest", "${patientId}_$filename.jpg")
-
+            //view.saveAsJPG(view, this.filesDir.path + "/spiralTest", "${patientId}_$filename.jpg")
+            /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+            /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
             var prevData: PathTraceData? = null
 
             if (pathTrace.size > 2) {
@@ -96,7 +98,7 @@ class SpiralTestActivity : AppCompatActivity() {
             intent.flags = Intent.FLAG_ACTIVITY_NO_HISTORY
             intent.putExtra("filename", "${patientId}_$filename.csv")
             startActivity(intent)
-            Toast.makeText(this, "Not implemented", Toast.LENGTH_LONG).show()
+            Toast.makeText(this, "Wait...", Toast.LENGTH_LONG).show()
         }
     }
 

@@ -5,7 +5,8 @@
     <string name="Login">Login</string>
     <string name="Password">Password</string>
     <string name="Name">Name</string>
-    <string name="ID">ID</string>
+    <string name="ID">ID(Gmail)</string>
+    <string name="Phone">Phone number</string>
     <string name="imageCaption">LogoImage</string>
     <string name="signUpMessage">No account yet? Create one</string>
     <string name="createAccount">Create Account</string>
@@ -13,20 +14,365 @@
 
     <!-- Main -->
     <string name="spiralTest">Spiral Test</string>
+    <string name="surveyTest">Survey</string>
     <string name="patientList">Patient List</string>
-    <string name="spiralExplain">Test patient\'s tremor</string>
+    <string name="spiralExplain">Test tremor of patient </string>
+    <string name="surveyExplain">Check on \n abnormal motor symptom</string>
     <string name="patientExplain">Management the patients</string>
 
     <!-- Written consent -->
-    <string name="demoText">
-        &#160;<b>Lorem ipsum</b> dolor sit amet, consectetur adipiscing elit. Donec pretium, lectus sit amet finibus blandit, leo libero ultricies ipsum, vitae volutpat nulla mi in massa. Vivamus finibus consectetur mi, ut imperdiet lorem vehicula eleifend. Phasellus blandit vel dolor at consectetur. Integer sit amet efficitur risus, vitae commodo est. In pulvinar pellentesque elementum. In sit amet lorem sagittis, feugiat tortor sed, mollis velit. Nam ut vestibulum magna. Sed viverra malesuada ligula, sed porta augue pellentesque in. Maecenas consectetur nunc non porta semper. Quisque molestie ex at faucibus placerat. Cras quis pellentesque dui. In malesuada purus eget lacus elementum, eu rhoncus mauris egestas. Nam metus orci, consequat et nulla vitae, mollis ullamcorper eros.\n
-        Donec et nulla in tellus posuere euismod gravida ac erat. Curabitur felis ipsum, hendrerit sit amet eros ut, venenatis pharetra neque. Nullam non varius felis, non dapibus nibh. Aenean neque elit, viverra ut nunc et, euismod dictum felis. Aenean nisi nisl, molestie eget lorem gravida, porta ultricies est. Nunc fermentum sodales augue, eget bibendum magna pellentesque nec. Donec magna lacus, bibendum eu ex sed, fermentum lobortis nisl. Sed vitae accumsan risus. Praesent pulvinar orci et ante semper, sed porta est scelerisque. Nulla ullamcorper molestie tincidunt. Morbi porta condimentum imperdiet. Suspendisse potenti. Aenean fermentum aliquet dapibus. Sed id felis euismod, consectetur augue non, ultricies libero. Vestibulum sollicitudin, nunc fringilla aliquet dignissim, ante urna vulputate mi, nec pretium est elit quis libero.\n
-        Donec id velit ut eros bibendum lobortis. Mauris mollis tempus risus vitae gravida. In vestibulum odio vitae placerat posuere. Proin ut sagittis mauris. Mauris porttitor vitae sem ut cursus. Morbi maximus enim ultricies, semper sem vitae, sollicitudin orci. Quisque eu tincidunt nisi, id sodales dolor. Etiam vitae dolor vitae neque egestas pulvinar sit amet id lectus.\n
-        Nam nunc neque, posuere elementum vestibulum non, faucibus sit amet turpis. Praesent sit amet urna purus. In sit amet ligula dapibus, vulputate nisi sit amet, ultrices velit. Etiam fringilla est a libero auctor, vitae pellentesque tellus fermentum. Etiam fermentum odio cursus erat dignissim posuere. Sed mollis felis ac nisl vehicula, in fermentum nunc pharetra. Mauris eu metus feugiat, consequat ipsum sed, posuere tortor. Cras feugiat vestibulum ultrices.\n
-        Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi hendrerit venenatis cursus. Donec et mi consectetur, mollis orci in, tempus sapien. Mauris in ex sapien. Donec pretium auctor tincidunt. Mauris ullamcorper mi placerat tellus tincidunt, vitae auctor nulla volutpat. Nullam volutpat ipsum non ex posuere tincidunt. Phasellus blandit auctor feugiat. Pellentesque ultricies aliquet leo, et dignissim turpis euismod cursus. Quisque non ornare ex, eget suscipit eros.\n
+
+
+    <!-- Written consent -->
+    <string name="Text1">
+        &#160;본 연구는 운동이상증 진단도구 개발 및 신경생리학적 바이오마커에 대한 연구입니다. 귀하는 본 연구에 참여할 것인지 여부를 결정하기 전에, 설명서와 동의서를 신중하게 읽어보셔야 합니다. 이 연구가 왜 수행되며, 무엇을 수행하는지 귀하가 이해하는 것이 중요합니다. 이 연구를 수행하는 연구책임자 또는 연구원이 귀하에게 이 연구에 대해 설명해 줄 것입니다. 이 연구는 자발적으로 참여 의사를 밝히신 분에 한하여 수행 될 것입니다. 다음 내용을 신중히 읽어보신 후 참여 의사를 밝혀 주시길 바라며, 필요하다면 가족이나 친구들과 의논해 보십시오. 만일 어떠한 질문이 있다면 담당 연구원이 자세하게 설명해 줄 것입니다.
+귀하의 서명은 귀하가 본 연구에 대해 그리고 위험성에 대해 설명을 들었음을 의미하며, 이 문서에 대한 귀하의 서명은 귀하께서 자신(또는 법정대리인)이 본 연구에 참가를 원한다는 것을 의미합니다.
     </string>
+
+    <string name="Text2">
+        &#160;통상적으로 진전을 평가하기 위해 UPDRS와 같은 임상학적 척도를 기준삼아 여러 검사를 진행하고 있습니다. 하지만 이러한 방법은 임상의 시각적 판단에 의거하기 때문에 정확한 정화에는 어려움을 겪고 있습니다.
+        최근에 뇌 신호를 활용하여 인간의 삶의 질을 높이기 위한 연구가 진행 중입니다. 특히 거동이 불편한 환자에게 생각만으로 자신의 의사를 표현하거나 움직임을 보조하는데 이를 이용하고 있으며, 일반인들에게는 자신의 생각을 인식해서 자동으로 관련 서비스를 해주는 로봇 등 보다 새롭고 편리한 생활 수단으로 활용하려는 연구가 진행 되고 있습니다. 이런 시스템을 고안하기 위해 여러 사용자의 데이터를 수집하고 저희가 만든 알고리즘을 실험해보고자 합니다.
+  </string>
+
+    <string name="Text3">
+        &#160;만일 귀하가 참여의사를 밝혀 주시면 다음과 같은 과정이 진행될 것입니다. 귀하는 어플리케이션을 통해 지시사항들을 수행하게 됩니다. 귀하가 수행할 지시사항은 다음 중 하나 혹은 여럿이 될 수 있습니다.
+\n 1) 나선형 선 따라 그리기
+\n 2) 글씨 쓰기
+\n 또한, 귀하는 실험 전, 중간, 후에 설문지를 작성할 수 있습니다. 설문지는 개인의 느낌, 외부적 상황들을 기록하고 데이터 분석에 활용됩니다.
+이렇게 측정된 데이터는 공학적 방법을 통해 분석되고 평가되어 운동이상증 진단도구 개발 및 신경생리학적 바이오마커 탐색 연구에 활용됩니다.
+   </string>
+
     <string name="acceptText">&#160;본인은 개인정보 수집 및 활용 동의서와 연구 동의서를 충분히 읽고 숙지하였으며, 이를 동의합니다.</string>
     <string name="agree">동의합니다</string>
     <string name="disagree">동의하지 않습니다</string>
     <string name="test">검사하기</string>
+
+    <string name="result1"><b>Hz : \nAmplitude : </b></string>
+    <string name="result2"><b>Correlation : \n Fitting ratio : </b></string>
+
+
+    <string name="part3_1">
+        &#160;<b>1. 말하기</b>\n
+\t 0. 정상\n
+\t 1. 약간 억양이 감소되어있고 말수나 목소리 크기가 감소된 정도다.\n
+\t 2. 말이 느리고 단일 음색이나 알아들을 수 있는 정도이며 확실히 비정상이라고 생각되는 경우\n
+\t 3. 심한 손상으로 알아듣기 힘든 정도다.\n
+\t 4. 거의 알아 들을 수 없는 정도의 심한 손상이다.
+    </string>
+
+    <string name="part3_2">
+        &#160;<b>2. 얼굴 표정</b>\n
+        \t 0. 정상\n
+        \t 1. 약간 표정이 감소된 정도로 정상으로 간주 될 수 있는 정도다. : poker face \n
+        \t 2. 약간 표정이 감소되었지만 확실히 비정상으로 간주 될 수 있는 정도다. \n
+        \t 3. 중등도로 표정이 감소되어 간혹 입술이 벌어지는 정도다. \n
+        \t 4. 심하게 얼굴이 굳은 표정이고 심하게 혹은 완전히 무표정한 상태로 입술은 약 1/4 inch 정도 벌어져 있다.
+    </string>
+    <string name="part3_3">
+        &#160;<b>3. 안정시 진전 - 얼굴과 턱</b>\n
+\t 0. 없음\n
+\t 1. 미약한 정도이며 드물게 나타난다.\n
+\t 2. 작은 크기로 떨리고 거의 항상 나타난다. 혹은 진폭이 크나 간혹 나타난다.\n
+\t 3. 중등도의 크기이며 거의 항상 나타난다.\n
+\t 4. 매우 크게 떨리며 거의 항상 나타난다.
+    </string>
+    <string name="part3_4">
+        &#160;<b>4. 안정시 진전- 오른쪽 팔</b>\n
+\t 0. 없음\n
+\t 1. 미약한 정도이며 드물게 나타난다.\n
+\t 2. 작은 크기로 떨리고 거의 항상 나타난다. 혹은 진폭이 크나 간혹 나타난다.\n
+\t 3. 중등도의 크기이며 거의 항상 나타난다.\n
+\t 4. 매우 크게 떨리며 거의 항상 나타난다.
+    </string>
+    <string name="part3_5">
+        &#160;<b>5. 안정시 진전- 왼쪽 팔</b>\n
+\t 0. 없음\n
+\t 1. 미약한 정도이며 드물게 나타난다.\n
+\t 2. 작은 크기로 떨리고 거의 항상 나타난다. 혹은 진폭이 크나 간혹 나타난다.\n
+\t 3. 중등도의 크기이며 거의 항상 나타난다.\n
+\t 4. 매우 크게 떨리며 거의 항상 나타난다.
+    </string>
+    <string name="part3_6">
+        &#160;<b>6. 안정시 진전- 오른쪽 다리</b>\n
+\t 0. 없음\n
+\t 1. 미약한 정도이며 드물게 나타난다.\n
+\t 2. 작은 크기로 떨리고 거의 항상 나타난다. 혹은 진폭이 크나 간혹 나타난다.\n
+\t 3. 중등도의 크기이며 거의 항상 나타난다.\n
+\t 4. 매우 크게 떨리며 거의 항상 나타난다.
+    </string>
+    <string name="part3_7">
+        &#160;<b>7. 안정시 진전- 왼쪽 다리</b>\n
+\t 0. 없음\n
+\t 1. 미약한 정도이며 드물게 나타난다.\n
+\t 2. 작은 크기로 떨리고 거의 항상 나타난다. 혹은 진폭이 크나 간혹 나타난다.\n
+\t 3. 중등도의 크기이며 거의 항상 나타난다.\n
+\t 4. 매우 크게 떨리며 거의 항상 나타난다.
+    </string>
+
+    <string name="part3_8">
+        &#160;<b>8. 운동 또는 자세성 진전 - 오른쪽 팔</b>\n
+\t 0. 없음\n
+\t 1. 약하게 떨리며 동작을 취할 때만 나타난다.\n
+\t 2. 중등도의 크기로 동작을 취할 때만 나타난다.\n
+\t 3. 중등도의 크기로 동작을 취할 때나 동작을 멈춘 상태에서 모두 나타난다.\n
+\t 4. 심하게 떨리면서 식사를 하기 어려울 정도이다.
+    </string>
+    <string name="part3_9">
+        &#160;<b>9. 운동 또는 자세성 진전 - 왼쪽 팔 </b>\n
+\t 0. 없음\n
+\t 1. 약하게 떨리며 동작을 취할 때만 나타난다.\n
+\t 2. 중등도의 크기로 동작을 취할 때만 나타난다.\n
+\t 3. 중등도의 크기로 동작을 취할 때나 동작을 멈춘 상태에서 모두 나타난다.\n
+\t 4. 심하게 떨리면서 식사를 하기 어려울 정도이다.
+    </string>
+    <string name="part3_10">
+        &#160;<b>10. 경직- 목(환자가 완전히 이완한 상태로 앉은 자세에서 큰 관절의 수동 운동시에 관찰하며 cogwheeling은 무시한다.)</b>\n
+\t 0. 없음\n
+\t 1. 미약한 정도로 반대편의 운동을 시킬 때나 다른 동작을 할 때만 관찰된다.\n
+\t 2. 중등도의 경직이다.\n
+\t 3. 심한 경직이 있으나, 관절 운동 범위의. 제한이 없다.\n
+\t 4. 매우 심한 경직상태로 관절 운동 범위의. 제한이 심하다.
+    </string>
+    <string name="part3_11">
+        &#160;<b>11. 경직- 오른쪽 팔</b>\n
+\t 0. 없음\n
+\t 1. 미약한 정도로 반대편의 운동을 시킬 때나 다른 동작을 할 때만 관찰된다.\n
+\t 2. 중등도의 경직이다.\n
+\t 3. 심한 경직이 있으나, 관절 운동 범위의. 제한이 없다.\n
+\t 4. 매우 심한 경직상태로 관절 운동 범위의. 제한이 심하다.
+    </string>
+    <string name="part3_12">
+        &#160;<b>12. 경직- 왼쪽 팔</b>\n
+\t 0. 없음\n
+\t 1. 미약한 정도로 반대편의 운동을 시킬 때나 다른 동작을 할 때만 관찰된다.\n
+\t 2. 중등도의 경직이다.\n
+\t 3. 심한 경직이 있으나, 관절 운동 범위의. 제한이 없다.\n
+\t 4. 매우 심한 경직상태로 관절 운동 범위의. 제한이 심하다.
+    </string>
+    <string name="part3_13">
+        &#160;<b>13. 경직- 오른쪽 다리</b>\n
+\t 0. 없음\n
+\t 1. 미약한 정도로 반대편의 운동을 시킬 때나 다른 동작을 할 때만 관찰된다.\n
+\t 2. 중등도의 경직이다.\n
+\t 3. 심한 경직이 있으나, 관절 운동 범위의. 제한이 없다.\n
+\t 4. 매우 심한 경직상태로 관절 운동 범위의. 제한이 심하다.
+    </string>
+    <string name="part3_14">
+        &#160;<b>14. 경직- 왼쪽 다리</b>\n
+\t 0. 없음\n
+\t 1. 미약한 정도로 반대편의 운동을 시킬 때나 다른 동작을 할 때만 관찰된다.\n
+\t 2. 중등도의 경직이다.\n
+\t 3. 심한 경직이 있으나, 관절 운동 범위의. 제한이 없다.\n
+\t 4. 매우 심한 경직상태로 관절 운동 범위의. 제한이 심하다.
+    </string>
+    <string name="part3_15">
+        &#160;<b>15. 손가락 벌렸다 오므리기 - 오른쪽 손 </b> \n
+ (FINGER TAPPING; 엄지와 검지를 최대한 벌렸다가 서로 부딪치게 하는 동작을 가능한 빨리하도록 지시한다.)\n
+\t 0. 정상 (≥15/5sec)\n
+\t 1. 약간 속도가 느리거나 크기가 감소된 정도다. (11-14/5sec)\n
+\t 2. 상당한 장애가 있고 일찍 머뭇거리며, 때로는 중간에 간혹 멈추기도 한다. (7-10/5sec)\n
+\t 3. 심한 장애가 있어서 처음 동작을 시작할 때에 지연이 있으며 지속적인 동작을 유지하지 못하고 중간에 멈춤이 있다. (3-6/5sec)\n
+\t 4. 거의 동작을 할 수 없다. (0-2/5sec)
+    </string>
+    <string name="part3_16">
+        &#160;<b>16. 손가락 벌렸다 오므리기 - 오른쪽 손 </b> \n
+\t 0. 정상 (≥15/5sec)\n
+\t 1. 약간 속도가 느리거나 크기가 감소된 정도다. (11-14/5sec)\n
+\t 2. 상당한 장애가 있고 일찍 머뭇거리며, 때로는 중간에 간혹 멈추기도 한다. (7-10/5sec)\n
+\t 3. 심한 장애가 있어서 처음 동작을 시작할 때에 지연이 있으며 지속적인 동작을 유지하지 못하고 중간에 멈춤이 있다. (3-6/5sec)\n
+\t 4. 거의 동작을 할 수 없다. (0-2/5sec)
+    </string>
+    <string name="part3_17">
+        &#160;<b>17. 손 운동 - 오른쪽 손(주먹을 가능한한 크게 빨리 쥐었다. 폈다하며 양손을 각각 시행한다.)</b>\n
+\t 0. 정상\n
+\t 1. 약간 속도가 느리거나 크기가 감소되어 있다.\n
+\t 2. 상당한 장애가 있고 일찍 머뭇거리며, 때로는 중간에 간혹 멈추기도 한다.\n
+\t 3. 심한 장애가 있어서 처음 동작을 시작할 때에 지연이 있으며 지속적인 동작을 유지하지 못하고 중간에 멈춤이 있다.\n
+\t 4. 거의 동작을 할 수 없다.
+    </string>
+    <string name="part3_18">
+        &#160;<b>18. 손 운동 - 왼쪽 손</b>\n
+\t 0. 정상\n
+\t 1. 약간 속도가 느리거나 크기가 감소되어 있다.\n
+\t 2. 상당한 장애가 있고 일찍 머뭇거리며, 때로는 중간에 간혹 멈추기도 한다.\n
+\t 3. 심한 장애가 있어서 처음 동작을 시작할 때에 지연이 있으며 지속적인 동작을 유지하지 못하고 중간에 멈춤이 있다.\n
+\t 4. 거의 동작을 할 수 없다.
+    </string>
+    <string name="part3_19">
+        &#160;<b>19. 빠른 손 놀림 - 오른쪽 손 (가능한한 크게 손의 내전과 외전을 반복케 하며 양손을 동시에 하도록 한다.)</b>\n
+\t 0. 정상\n
+\t 1. 약간 속도가 느리거나 폭이 감소되어 있다.\n
+\t 2. 상당한 장애가 있고 일찍 머뭇거리며, 때로는 중간에 간혹 멈추기도 한다.\n
+\t 3. 심한 장애가 있어서 처음 동작을 시작할 때에 지연이 있으며 지속적인 동작을 유지하지 못하고 중간에 멈춤이 있다.\n
+\t 4. 거의 동작을 할 수 없다.
+    </string>
+    <string name="part3_20">
+        &#160;<b>20. 빠른 손 놀림 - 완쪽 손 (가능한한 크게 손의 내전과 외전을 반복케 하며 양손을 동시에 하도록 한다.)</b>\n
+\t 0. 정상\n
+\t 1. 약간 속도가 느리거나 폭이 감소되어 있다.\n
+\t 2. 상당한 장애가 있고 일찍 머뭇거리며, 때로는 중간에 간혹 멈추기도 한다.\n
+\t 3. 심한 장애가 있어서 처음 동작을 시작할 때에 지연이 있으며 지속적인 동작을 유지하지 못하고 중간에 멈춤이 있다.\n
+\t 4. 거의 동작을 할 수 없다.
+    </string>
+    <string name="part3_21">
+        &#160;<b>21. 다리의 민첩성- 오른쪽 다리</b>\n
+        (무릎을 굽히고 환자는 발꿈치를 들었다가 땅에 연속적으로 쿵쿵친다. 발드는 정도는 10 cm이상)\n
+\t 0. 정상\n
+\t 1. 약간 속도가 느리거나 크기가 감소되어 있다.\n
+\t 2. 상당한 장애가 있고 일찍 머뭇거리며, 때로는 중간에 간혹 멈추기도 한다.\n
+\t 3. 심한 장애가 있어서 처음 동작을 시작할 때에 지연이 있으며 지속적인 동작을 유지하지 못하고 중간에 멈춤이 있다.\n
+\t 4. 거의 종작을 할 수 없다.
+    </string>
+    <string name="part3_22">
+        &#160;<b>22. 다리의 민첩성- 왼쪽 다리</b>\n
+        (무릎을 굽히고 환자는 발꿈치를 들었다가 땅에 연속적으로 쿵쿵친다. 발드는 정도는 10 cm이상)\n
+\t 0. 정상\n
+\t 1. 약간 속도가 느리거나 크기가 감소되어 있다.\n
+\t 2. 상당한 장애가 있고 일찍 머뭇거리며, 때로는 중간에 간혹 멈추기도 한다.\n
+\t 3. 심한 장애가 있어서 처음 동작을 시작할 때에 지연이 있으며 지속적인 동작을 유지하지 못하고 중간에 멈춤이 있다.\n
+\t 4. 거의 종작을 할 수 없다.
+    </string>
+    <string name="part3_23">
+        &#160;<b>23. 의자에서 일어서기 (등받이가 있는 나무나 철제 의자에서 팔짱을 끼고 일어나도록 함)</b>\n
+\t 0. 정상 \n
+\t 1. 느리거나 한번 이상의 시도로 일어날 수 있다.\n
+\t 2. 의자에서 팔로 몸을 일으켜 세워야만 일어날 수 있다.\n
+\t 3. 뒤로 넘어가 몇 번 의자에 다시 주저앉지만 다른 사람의 도움이 없이 일어날 수 있다.\n
+\t 4. 다른 사람의 도움이 없이는 일어날 수 없다.
+    </string>
+    <string name="part3_24">
+        &#160;<b>24. 서 있는 자세</b>
+\t 0. 정상 \n
+\t 1. 완전히 똑바로 서있지만 않고 약간 구부정한 자세이지만 노인의 경우라면 정상으로도 생각될 수 있는 정도다. \n
+\t 2. 상당히 구부정한 자세이며 완전히 비정상적이다. 약간 한쪽으로 기울어져 있다. \n
+\t 3. 매우 심하게 구부정한 자세이며 등이 굽어 있다. 상당히 한편으로 기울어져 있다. \n
+\t 4. 매우 심하게 굽어져 있으며 심하게 비정상적인 자세이다.
+    </string>
+    <string name="part3_25">
+        &#160;<b>25. 걸음걸이</b>\n
+\t 0. 정상 \n
+\t 1. 속도가 느리고 좁은 보폭으로 다리를 질질 끌지만 종종걸음이나 앞으로 쏠리지는 않는다. \n
+\t 2. 힘들게 걷지만 거의 다른 사람의 도움은 필요 없다. 약간의 종종걸음이나 앞으로 쏠리는 모습을 보인다. \n
+\t 3. 매우 불안정한 자세이며 쉽게 균형을 잃는다. \n
+\t 4. 남이 도와주지 않으며 서 있을 수 없다.
+    </string>
+    <string name="part3_26">
+        &#160;<b>26. 자세안정 (환자가 다리를 약간 벌리고 눈을 뜬 채 서게하고 환자의 뒤에서 환자의 어깨를 갑자기 잡아당김)</b>\n
+\t 0. 정상 \n
+\t 1. 뒷걸음질치지만 도움 없이 중심을 잡는 경우 \n
+\t 2. 자세유지가 되지 않아 검사자가 잡아주지 않으면 넘어지는 경우 \n
+\t 3. 자세가 매우 불안정 하여 저절로 균형을 잃는 경우 \n
+\t 4. 남이 도와주지 않으면 서 있을 수 없다.
+
+    </string>
+    <string name="part3_27">
+        &#160;<b>27. 느린 행동</b>
+        (속도가 느리거나, 운동 시작이 느리거나, 팔 흔들거림이 감소되어 있거나 운동의 폭이 좁거나 전반적으로 움직임이 감소되어 있거나)
+\t 0. 정상 \n
+\t 1. 약간 느리지만 조심성 있어 보이는 정도로 어떤 사람에게는 정상으로 생각될 수 있는 정도다. 움직임의 크기는 약간 줄어들어있다. \n
+\t 2. 약간 느리며 완전히 비정상적으로 느껴질 만큼 움직임이 줄어들어있다. 아니면 상당히 움직임의 크기가 줄어들은 정도다. \n
+\t 3. 중동도의 느린 속도를 보이며 매우 감소된 크기를 보여준다. \n
+\t 4. 매우 느리고 운동의 폭은 거의 감지되지 않는다.
+    </string>
+    <string name="crts3_A">
+        <b>1-10. 진전: 각 세가지 항목에 대해 즉정한다.</b> \n
+\t a. 안정시 : 환자를 눕힌 상태에서 측정 \n
+\t b. 자세시 : 양손을 앞으로 뻗고, 손목을 약간 신전시키면서 손가락은 버리게 하며 측정, 하지는 앉은 자세에서
+무릎과 발목을 굽힌 채로 약간 들게 해서 측정, 혀는 앞으로 내밀게 해서 측정, 머리와 몸통은 앉거나 선 자세
+에서 측정 \n
+\t c. 운동시 : 상지는 손가락-코(finger to nose)나 다른 운동을 시키고, 하지는 toe to finger를 시킨다
+        <b>점수</b>\n
+\t 0 = 없음 \n
+\t 1 = 거의 알아보기 어려운 정도이며 간간이 나타난다.\n
+\t 2 = 어느 정도 간간이 관찰되며 약 2㎝미만으로 떨린다. \n
+\t 3 = 비교적 심하게 관찰되며 지속적으로 약 2-4㎝ 정도 떨린다. \n
+\t 4 = 매우 심하게 떨리며 진폭이 4㎝이상이다.
+    </string>
+
+    <string name="crts_b_11">
+        <b>글쓰기 : 환자에게 예제문장을 쓰게 한다. (주로 쓰는 손만 검사한다.)</b>\n
+\t 0 = 정상 \n
+\t 1 = 미약한 정도로 떨린다. \n
+\t 2 = 읽을 수는 있지만 진전이 어느 정도는 관찰된다. \n
+\t 3 = 거의 읽을 수 없을 정도로 떨린다. \n
+\t 4 = 매우 심한 진전으로 인해 펜을 잡을 수도 없거나 다른 손으로 종이를 받치지 않으면 쓸 수가 없다.
+    </string>
+    <string name="crts_b_12">
+<b> 14. 각각의 그림을 주변 선에 닿지 않게 그리도록 한다. 팔꿈치나 손이 책상에 닿지 않게 하며 증상이 경미한 손부터 그리도록 한다.</b>\n
+\t 0 = 정상 \n
+\t 1 = 미약한 정도로 떨리며 간혹 주변 선에 닿기도 한다. \n
+        \t 2 = 어느 정도 떨리며 자주 부변 선에 선에 닿는다. \n
+\t 3 = 매우 어렵게 그림을 그리고 심하게 실수를 범한다. \n
+        \t 4 = 그림 그리기를 끝마칠 수 없다.
+    </string>
+    <string name="crts_b_15">
+        <b>15. 물 따르기 : 약 8㎝높이의 플라스틱 컵에 1㎝정도 남기고 물을 채우도록 하고 채운 물을 다른컵에 붓도록 한다.</b>\n
+\t 0 = 정상\n
+\t 1 = 진전이 없는 정상인 보다는 더 조심스럽게 물을 붓지만 물을 흘리지는 않는다. \t \t 2 = 약간 물을 (전체의 10% 미만 정도)\n
+\t 3 = 많이 물을 흘린다. (전체의 10-50% 정도) 4 = 물을 거의 다 흘려서 전혀 수행할수 없다.
+    </string>
+    <string name="crts_c_16">
+        <b>16. 말하기 : 강직성 발성장애(spastic dysphonia)가 있으면 이것도 포함시킨다.</b>\n
+\t 0 = 정상 \n
+\t 1 = 신경을 쓸 때만 목소리가 약간 떨린다. \t \t 2 = 항상 목소리가 떨리지만 미미한 정도다. \n
+\t 3 = 어느 정도 목소리가 떨린다. 4 = 매우 심하게 떨려서 어떤 말은 알아 들을 수 없는 정도이다.
+    </string>
+    <string name="crts_c_17">
+        <b>17. 음식 먹기 : 물 종류는 제외한다.</b>
+\t 0 = 정상 \n
+\t 1 = 매우 드물게 음식을 흘리지만 모든 음식을 입까지 가져올 수 있다. \n
+        \t 2 = 조그만 음식은 자주 흘리고 머리를 음식물까지 움직이다. \n
+\t 3 = 매우 심하게 떨려서 수저질이 잘 안된다. 4 = 너무 심하게 떨려서 남이 먹여줘야 한다.
+    </string>
+    <string name="crts_c_18">
+        <b>18. 물을 입에 갖다 대기</b>\n
+\t 0 = 정상 \n
+\t 1 = 국을 떠먹는데 숟가락을 쓸 수는 있지만 많이는 못 뜬다. \n
+\t 2 = 숟가락은 쓰지 못하고 컵 종류를 쓰던지 그릇을 들고 마신다. \n
+\t 3 = 매우 심하게 떨려서 컵이나 그릇을 들고 마시더라고 양손 모두 받치고 마신다. \n
+\t 4 = 너무 심하게 떨려서 빨대로 마실 수밖에 없다.
+    </string>
+    <string name="crts_c_19">
+        <b>19. 개인 위생</b>\n
+\t 0 = 정상 \n
+\t 1 = 모든 것을 혼자서 수행할 수는 있지만 정상에 비해서는 더 조심스러운 편이다. \n
+\t 2 = 혼자서 모든 것을 수행할 수는 있지만 더 안전한 다른 방법으로 해결한다. (전기면도기) \n
+\t 3 = 두손으로 받치지 않으면 모든 일을 혼자서 할 수 없다. (립스틱 바를 수 없거나 전기면도기로도 면도를 못하는 경우) \n
+\t 4 = 모든 세밀한 작업을 할수 없다.
+    </string>
+    <string name="crts_c_20">
+        <b>20. 옷 입기</b>
+\t 0 = 정상 \n
+\t 1 = 모든 것을 혼자서 수행할 수는 있지만 정상에 비해서는 더 조심스러운 편이다. \n
+\t 2 = 모든 것을 혼자서 수행할 수는 있지만 실수를 범한다. \n
+\t 3 = 매우 심하게 떨려서 옷 단추를 못채우고 신발 끈을 못 묶는다. \n
+\t 4 = 옷을 입는 큰 동작 조차도 혼자서 할 수 없어서 남의 도움이 필요하다.
+    </string>
+    <string name="crts_c_21">
+0 = 정상 \n
+1 = 약간 비정상 적이지만 혹은 집안 일을 하는데는 문제없다. \n 2 = 편지 쓰기 정도는 못하지만 아직은 글씨를 아아볼수 있다. \n
+3 = 매우 심하게 떨려서 글씨를 알아볼 수가 없다. \n 4 = 이름을 써야하는 경우에도 (싸인) 전혀 쓸 수가 없다.
+    </string>
+    <string name="crts_c_22">
+        <b>22. 일하기</b>\n
+\t 0 = 떨림이 있지만 직장 혹은 집안 일을 하는데는 문제없다. \n
+        \t 1 = 일을 할 수는 있지만 정상인에 비해서는 조심스럽다. \t 2 = 떨리는 것 때문에 일도 다른 사람에 비해서 뒤쳐진다.\n
+\t 3 = 떨리는 것 때문에 직장도 옮겨야 하고 집안일의 경우 다림질을 할 수 있다. \t 4 = 직장을 가질 수 없고 집안일도 극히 일부만 가능한 정도
+    </string>
+    <string name="crts_c_23">
+        <b>23. 사회 활동</b>\n
+\t 0 = 전혀 변함이 없다. \n
+\t 1 = 사회 생활이 약간은 변했다고 생각하지만 그래도 할 수는 있다. \t 2 = 낯선 사람들을 만나기를 피하며 사회 생활에 제한을 받음 \n
+\t 3 = 친구들 조차 만나기를 꺼리고 사회 생활에 지장이 많다. \t 4 = 모든 사람을 만나기를 꺼리고 사회 생활이 불가능
+    </string>
+
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
+    <string name="tab_text_3">Tab 3</string>
+    <string name="action_settings">Settings</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

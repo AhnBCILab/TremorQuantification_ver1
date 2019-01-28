@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,43 +7,210 @@
     tools:context=".ResultActivity"
     android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/mean"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
 
-    <TextView
-        android:id="@+id/std"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="50dp">
 
-    <TextView
-        android:id="@+id/standard"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="3">
 
-    <TextView
-        android:id="@+id/amp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+                <LinearLayout
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:padding="30dp">
 
-    <TextView
-        android:id="@+id/Hz"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
 
-    <TextView
-        android:id="@+id/fittingMean"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/title1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/Primary"
+                    android:text="Freqeuncy Analysis"
+                    android:textAlignment="center"
+                    android:textAllCaps="true"
+                    android:textColor="@android:color/background_light"
+                    android:textSize="20sp" />
+                <!--android:layout_marginTop="50sp"-->
+                    <com.github.mikephil.charting.charts.HorizontalBarChart
+                        android:id="@+id/chart"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                <!--<TextView-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="오늘 검사"-->
+                    <!--android:textSize="30sp" />-->
+                    <TextView
+                        android:id="@+id/Hz"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="30sp" />
+                <!--<TextView-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="지난 검사"-->
+                    <!--android:textSize="30sp" />-->
+                    <TextView
+                        android:id="@+id/amp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="30sp" />
 
-    <TextView
-        android:id="@+id/fittingStd"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/title2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/Primary"
+                    android:text="Fitting ratio Analysis"
+                    android:textAlignment="center"
+                    android:textAllCaps="true"
+                    android:textColor="@android:color/background_light"
+                    android:textSize="20sp" />
 
-    <com.github.mikephil.charting.charts.LineChart
-        android:id="@+id/lineChart"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
-</LinearLayout>
+                    <!--<TextView-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:text="오늘 검사"-->
+                        <!--android:textSize="30sp" />-->
+                    <!--<TextView-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:text="지난 검사"-->
+                        <!--android:textSize="30sp" />-->
+                <TextView
+                    android:id="@+id/fittingMean"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="top|left"
+                    android:lines="10"
+                    android:maxLines="3"
+                    android:minLines="2"
+                    android:textSize="30sp" />
+                </LinearLayout>
+
+                <com.github.mikephil.charting.charts.LineChart
+                    android:id="@+id/lineChart"
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"/>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="1">
+
+
+                    <TextView
+                        android:layout_width="0dip"
+                        android:layout_weight="10"
+                        android:layout_height="match_parent"
+                        android:background="@color/Fourth"
+                        android:gravity="bottom"
+                        android:padding="10dp"
+                        android:lineSpacingExtra="10dp"
+                        android:text="@string/crts_b_12" />
+
+                    <RadioGroup
+                        android:layout_width="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:gravity="bottom"
+                        android:orientation="vertical">
+
+
+                        <RadioButton
+                        android:id="@+id/crts12_0"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/Fourth"
+                        android:text="0"/>
+
+                    <RadioButton
+                        android:id="@+id/crts12_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/Fourth"
+                        android:text="1"/>
+
+                    <RadioButton
+                        android:id="@+id/crts12_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/Fourth"
+                        android:text="2"/>
+
+                    <RadioButton
+                        android:id="@+id/crts12_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/Fourth"
+                        android:text="3"/>
+
+                    <RadioButton
+                        android:id="@+id/crts12_4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/Fourth"
+                        android:text="4"/>
+                    </RadioGroup>
+
+
+                <FrameLayout
+                    android:layout_width="0dip"
+                    android:layout_weight="9"
+                    android:layout_height="match_parent">
+                    <Button
+                        android:id="@+id/Gosurvey"
+                        android:layout_margin="30dp"
+                        android:layout_width="300dp"
+                        android:textSize="30sp"
+                        android:layout_gravity="bottom|right"
+                        android:layout_height="wrap_content"
+                        android:text="검사지로 돌아가기" />
+                </FrameLayout>
+
+
+            </TableRow>
+
+        </TableLayout>
+
+        <!--<TextView-->
+        <!--android:id="@+id/mean"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content" />-->
+
+    <!--<TextView-->
+        <!--android:id="@+id/std"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content" />-->
+
+    <!--<TextView-->
+        <!--android:id="@+id/amp"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content" />-->
+
+    <!--<TextView-->
+        <!--android:id="@+id/Hz"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content" />-->
+
+    <!--<TextView-->
+        <!--android:id="@+id/fittingMean"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content" />-->
+
+    <!--<TextView-->
+        <!--android:id="@+id/fittingStd"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content" />-->
+
+
+</RelativeLayout>

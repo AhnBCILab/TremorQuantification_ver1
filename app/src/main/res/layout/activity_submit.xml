@@ -6,4 +6,179 @@
     android:layout_height="match_parent"
     tools:context=".SubmitActivity">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="8dp">
+
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="30dp">
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:textSize="50dp"
+                    android:textColor="#ffffff"
+                    android:layout_weight="1"
+                    android:background="@color/Secondary"
+                    android:layout_height="wrap_content"
+                    android:text="SURVEY RESULT" />
+            </TableRow>
+
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp">
+
+                <TextView
+                    android:layout_width="0dip"
+                    android:gravity="center"
+                    android:textSize="30dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Part 3" />
+                <TextView
+                    android:gravity="center"
+                    android:textSize="30dp"
+                    android:layout_width="0dip"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="CRTS" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"  >
+                <TextView
+                    android:id="@+id/total1"
+                    android:layout_width="0dip"
+                    android:gravity="center"
+                    android:textSize="20dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                   />
+                <TextView
+                    android:id="@+id/total2"
+                    android:gravity="center"
+                    android:textSize="20dp"
+                    android:layout_width="0dip"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Total : " />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="30dp">
+
+                <!--<FrameLayout-->
+                    <!--android:layout_width="0dip"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:layout_weight="1">-->
+
+                <com.github.mikephil.charting.charts.PieChart
+                    android:id="@+id/part3chart"
+                    android:layout_weight="3"
+                    android:layout_width="0dip"
+                    android:layout_height="200dp"
+                    />
+
+                <!--</FrameLayout>-->
+                <!--<FrameLayout-->
+                    <!--android:layout_width="0dip"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:layout_weight="1">-->
+
+                    <!--<LinearLayout-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="match_parent"-->
+                        <!--android:orientation="horizontal">-->
+
+                    <com.github.mikephil.charting.charts.PieChart
+                        android:id="@+id/CRTSchart1"
+                        android:layout_weight="1"
+                        android:layout_width="0dip"
+                        android:layout_height="200dp"
+                    />
+                    <com.github.mikephil.charting.charts.PieChart
+                        android:id="@+id/CRTSchart2"
+                        android:layout_weight="1"
+                        android:layout_width="0dip"
+                        android:layout_height="200dp"
+                        />
+                    <com.github.mikephil.charting.charts.PieChart
+                        android:id="@+id/CRTSchart3"
+                        android:layout_weight="1"
+                        android:layout_width="0dip"
+                        android:layout_height="200dp"
+                        />
+                    <!--</LinearLayout>-->
+                <!--</FrameLayout>-->
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:layout_height="match_parent"
+                android:layout_margin="30dp">
+                <Button
+                    android:id="@+id/spiraBtn"
+                    android:layout_width="400dp"
+                    android:layout_height="wrap_content"
+                    android:text="나선그리기 검사" />
+            </TableRow>
+            <!--<TableRow-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:gravity="center"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_margin="30dp">-->
+                <!--<Button-->
+                    <!--android:id="@+id/letterBtn"-->
+                    <!--android:layout_width="400dp"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="글씨쓰기 검사" />-->
+            <!--</TableRow>-->
+
+            <!--<TableRow-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:gravity="center"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_margin="30dp">-->
+                <!--<Button-->
+                    <!--android:id="@+id/lineBtn"-->
+                    <!--android:layout_width="400dp"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="직선그리기 검사" />-->
+            <!--</TableRow>-->
+
+
+        </TableLayout>
+
+        <Button
+            android:id="@+id/finish"
+            android:layout_marginTop="100dp"
+            android:layout_gravity="center"
+            android:layout_width="700dp"
+            android:textSize="30dp"
+            android:textColor="#000000"
+            android:background="@color/Secondary"
+            android:layout_height="wrap_content"
+            android:text="검사끝내기" />
+
+    </LinearLayout>
 </android.support.constraint.ConstraintLayout>

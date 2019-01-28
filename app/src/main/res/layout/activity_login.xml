@@ -20,10 +20,9 @@
             android:padding="72dp">
 
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="100dp"
-                android:src="@drawable/logo"
-                android:layout_marginBottom="72dp"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:src="@drawable/mainlogo"
                 android:layout_gravity="center_horizontal"
                 android:contentDescription="@string/imageCaption" />
 

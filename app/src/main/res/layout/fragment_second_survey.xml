@@ -5,10 +5,2811 @@
     android:layout_height="match_parent"
     tools:context=".SecondSurvey">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:screenOrientation="portrait">
 
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true">
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="50dp"
+                android:background="@color/Primary">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="3dp">
+
+                    <TextView    style="@style/survey"
+                        android:id="@+id/textA"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="1dp"
+                        android:layout_weight="3"
+                        android:background="@color/Fourth"
+                        android:lineSpacingExtra="10dp"
+                        android:text="@string/crts3_A"
+                        tools:layout_editor_absoluteX="16dp"
+                        tools:layout_editor_absoluteY="16dp" />
+                </TableRow>
+                <!-- //////////////////////////////////////////Survey start////////////////////////////////////////////// -->
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginRight="3dp">
+
+                    <TextView    style="@style/survey"
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="3dp"
+                        android:layout_weight="1"
+                        android:background="@color/Fourth"
+                        android:lineSpacingExtra="10dp"
+                        android:text="1. 얼굴"
+                        tools:layout_editor_absoluteX="16dp"
+                        tools:layout_editor_absoluteY="16dp" />
+
+                    <TextView    style="@style/survey"
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@color/Fourth"
+                        android:lineSpacingExtra="10dp"
+                        android:text="2.혀"
+                        tools:layout_editor_absoluteX="16dp"
+                        tools:layout_editor_absoluteY="16dp" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp">
+
+                    <TextView
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="3dp"
+                        android:layout_weight="1"
+                        android:background="@color/Fourth"
+                        android:gravity="right"
+                        android:lineSpacingExtra="10dp"
+                        android:text="0 \t\t\t 1 \t\t\t 2 \t\t\t 3 \t\t\t 4\t "
+                        tools:layout_editor_absoluteX="16dp"
+                        tools:layout_editor_absoluteY="16dp" />
+
+                    <TextView
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@color/Fourth"
+                        android:gravity="right"
+                        android:lineSpacingExtra="10dp"
+                        android:text="0 \t\t\t 1 \t\t\t 2 \t\t\t 3 \t\t\t 4\t "
+                        tools:layout_editor_absoluteX="16dp"
+                        tools:layout_editor_absoluteY="16dp" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp">
+
+                    <TextView    style="@style/survey"
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@color/Fourth"
+                        android:lineSpacingExtra="10dp"
+                        android:text="안정시"
+                        tools:layout_editor_absoluteX="16dp"
+                        tools:layout_editor_absoluteY="16dp" />
+
+                    <RadioGroup
+                        android:layout_width="0dip"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="3dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/crts1_0"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth" />
+
+                        <RadioButton
+                            android:id="@+id/crts1_1_1"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth" />
+
+                        <RadioButton
+                            android:id="@+id/crts1_1_2"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth" />
+
+                        <RadioButton
+                            android:id="@+id/crts1_1_3"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth" />
+
+                        <RadioButton
+                            android:id="@+id/crts1_1_4"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth" />
+                    </RadioGroup>
+
+
+                    <TextView    style="@style/survey"
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@color/Fourth"
+                        android:lineSpacingExtra="10dp"
+                        android:text="안정시"
+                        tools:layout_editor_absoluteX="16dp"
+                        tools:layout_editor_absoluteY="16dp" />
+
+                    <RadioGroup
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/crts2_1_0"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth" />
+
+                        <RadioButton
+                            android:id="@+id/crts2_1_1"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth" />
+
+                        <RadioButton
+                            android:id="@+id/crts2_1_2"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth" />
+
+                        <RadioButton
+                            android:id="@+id/crts2_1_3"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth" />
+
+                        <RadioButton
+                            android:id="@+id/crts2_1_4"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth" />
+                    </RadioGroup>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp">
+
+                    <TextView    style="@style/survey"
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@color/Fourth"
+                        android:lineSpacingExtra="10dp"
+                        android:text="자세시"
+                        tools:layout_editor_absoluteX="16dp"
+                        tools:layout_editor_absoluteY="16dp" />
+
+                    <RadioGroup
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="3dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/crts1_2_0"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth" />
+
+                        <RadioButton
+                            android:id="@+id/crts1_2_1"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth" />
+
+                        <RadioButton
+                            android:id="@+id/crts1_2_2"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth" />
+
+                        <RadioButton
+                            android:id="@+id/crts1_2_3"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth" />
+
+                        <RadioButton
+                            android:id="@+id/crts1_2_4"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth" />
+                    </RadioGroup>
+
+
+                    <TextView    style="@style/survey"
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_column="0"
+                        android:layout_weight="1"
+                        android:background="@color/Fourth"
+                        android:lineSpacingExtra="10dp"
+                        android:text="자세시"
+                        tools:layout_editor_absoluteX="16dp"
+                        tools:layout_editor_absoluteY="16dp" />
+
+
+                    <RadioGroup
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/crts2_2_0"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth" />
+
+                        <RadioButton
+                            android:id="@+id/crts2_2_1"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth" />
+
+                        <RadioButton
+                            android:id="@+id/crts2_2_2"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth" />
+
+                        <RadioButton
+                            android:id="@+id/crts2_2_3"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth" />
+
+                        <RadioButton
+                            android:id="@+id/crts2_2_4"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth" />
+                    </RadioGroup>
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp">
+
+                    <TextView    style="@style/survey"
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@color/Fourth"
+                        android:lineSpacingExtra="10dp"
+                        android:text="운동시"
+                        tools:layout_editor_absoluteX="16dp"
+                        tools:layout_editor_absoluteY="16dp" />
+
+
+                    <RadioGroup
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="3dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/crts1_3_0"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth" />
+
+                        <RadioButton
+                            android:id="@+id/crts1_3_1"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth" />
+
+                        <RadioButton
+                            android:id="@+id/crts1_3_2"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth" />
+
+                        <RadioButton
+                            android:id="@+id/crts1_3_3"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth" />
+
+                        <RadioButton
+                            android:id="@+id/crts1_3_4"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth" />
+                    </RadioGroup>
+
+
+                    <TextView    style="@style/survey"
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@color/Fourth"
+                        android:lineSpacingExtra="10dp"
+                        android:text="운동시"
+                        tools:layout_editor_absoluteX="16dp"
+                        tools:layout_editor_absoluteY="16dp" />
+
+
+                    <RadioGroup
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/crts2_3_0"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth" />
+
+                        <RadioButton
+                            android:id="@+id/crts2_3_1"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth" />
+
+                        <RadioButton
+                            android:id="@+id/crts2_3_2"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth" />
+
+                        <RadioButton
+                            android:id="@+id/crts2_3_3"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth" />
+
+                        <RadioButton
+                            android:id="@+id/crts2_3_4"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth" />
+                    </RadioGroup>
+                </TableRow>
+
+                <!--/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginRight="3dp">
+
+                    <TextView    style="@style/survey"
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="3dp"
+                        android:layout_weight="1"
+                        android:background="@color/Fourth"
+                        android:lineSpacingExtra="10dp"
+                        android:text="3. 목소리"
+                        tools:layout_editor_absoluteX="16dp"
+                        tools:layout_editor_absoluteY="16dp" />
+
+                    <TextView    style="@style/survey"
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@color/Fourth"
+                        android:lineSpacingExtra="10dp"
+                        android:text="4. 머리"
+                        tools:layout_editor_absoluteX="16dp"
+                        tools:layout_editor_absoluteY="16dp" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp">
+
+                    <TextView
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="3dp"
+                        android:layout_weight="1"
+                        android:background="@color/Fourth"
+                        android:gravity="right"
+                        android:lineSpacingExtra="10dp"
+                        android:text="0 \t\t\t 1 \t\t\t 2 \t\t\t 3 \t\t\t 4\t "
+                        tools:layout_editor_absoluteX="16dp"
+                        tools:layout_editor_absoluteY="16dp" />
+
+                    <TextView
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@color/Fourth"
+                        android:gravity="right"
+                        android:lineSpacingExtra="10dp"
+                        android:text="0 \t\t\t 1 \t\t\t 2 \t\t\t 3 \t\t\t 4\t "
+                        tools:layout_editor_absoluteX="16dp"
+                        tools:layout_editor_absoluteY="16dp" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp">
+
+                    <TextView    style="@style/survey"
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@color/Fourth"
+                        android:lineSpacingExtra="10dp"
+                        android:text="안정시"
+                        tools:layout_editor_absoluteX="16dp"
+                        tools:layout_editor_absoluteY="16dp" />
+
+                    <RadioGroup
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="3dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/crts3_1_0"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth" />
+
+                        <RadioButton
+                            android:id="@+id/crts3_1_1"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth" />
+
+                        <RadioButton
+                            android:id="@+id/crts3_1_2"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth" />
+
+                        <RadioButton
+                            android:id="@+id/crts3_1_3"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth" />
+
+                        <RadioButton
+                            android:id="@+id/crts3_1_4"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth" />
+                    </RadioGroup>
+
+                    <TextView    style="@style/survey"
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@color/Fourth"
+                        android:lineSpacingExtra="10dp"
+                        android:text="안정시"
+                        tools:layout_editor_absoluteX="16dp"
+                        tools:layout_editor_absoluteY="16dp" />
+
+                    <RadioGroup
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/crts4_1_0"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth" />
+
+                        <RadioButton
+                            android:id="@+id/crts4_1_1"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth" />
+
+                        <RadioButton
+                            android:id="@+id/crts4_1_2"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth" />
+
+                        <RadioButton
+                            android:id="@+id/crts4_1_3"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth" />
+
+                        <RadioButton
+                            android:id="@+id/crts4_1_4"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth" />
+                    </RadioGroup>
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp">
+
+                    <TextView    style="@style/survey"
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@color/Fourth"
+                        android:lineSpacingExtra="10dp"
+                        android:text="자세시"
+                        tools:layout_editor_absoluteX="16dp"
+                        tools:layout_editor_absoluteY="16dp" />
+
+
+                    <RadioGroup
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="3dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/crts3_2_0"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth" />
+
+                        <RadioButton
+                            android:id="@+id/crts3_2_1"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth" />
+
+                        <RadioButton
+                            android:id="@+id/crts3_2_2"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth" />
+
+                        <RadioButton
+                            android:id="@+id/crts3_2_3"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth" />
+
+                        <RadioButton
+                            android:id="@+id/crts3_2_4"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth" />
+                    </RadioGroup>
+
+                    <TextView    style="@style/survey"
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@color/Fourth"
+                        android:lineSpacingExtra="10dp"
+                        android:text="자세시"
+                        tools:layout_editor_absoluteX="16dp"
+                        tools:layout_editor_absoluteY="16dp" />
+
+
+                    <RadioGroup
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/crts4_2_0"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth" />
+
+                        <RadioButton
+                            android:id="@+id/crts4_2_1"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth" />
+
+                        <RadioButton
+                            android:id="@+id/crts4_2_2"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth" />
+
+                        <RadioButton
+                            android:id="@+id/crts4_2_3"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth" />
+
+                        <RadioButton
+                            android:id="@+id/crts4_2_4"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth" />
+                    </RadioGroup>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp">
+
+                    <TextView    style="@style/survey"
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_column="0"
+                        android:layout_weight="1"
+                        android:background="@color/Fourth"
+                        android:lineSpacingExtra="10dp"
+                        android:text="운동시"
+                        tools:layout_editor_absoluteX="16dp"
+                        tools:layout_editor_absoluteY="16dp" />
+
+
+                    <RadioGroup
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="3dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/crts3_3_0"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth" />
+
+                        <RadioButton
+                            android:id="@+id/crts3_3_1"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth" />
+
+                        <RadioButton
+                            android:id="@+id/crts3_3_2"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth" />
+
+                        <RadioButton
+                            android:id="@+id/crts3_3_3"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth" />
+
+                        <RadioButton
+                            android:id="@+id/crts3_3_4"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth" />
+                    </RadioGroup>
+
+                    <TextView    style="@style/survey"
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@color/Fourth"
+                        android:lineSpacingExtra="10dp"
+                        android:text="운동시"
+                        tools:layout_editor_absoluteX="16dp"
+                        tools:layout_editor_absoluteY="16dp" />
+
+
+                    <RadioGroup
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/crts4_3_0"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth" />
+
+                        <RadioButton
+                            android:id="@+id/crts4_3_1"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth" />
+
+                        <RadioButton
+                            android:id="@+id/crts4_3_2"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth" />
+
+                        <RadioButton
+                            android:id="@+id/crts4_3_3"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth" />
+
+                        <RadioButton
+                            android:id="@+id/crts4_3_4"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth" />
+                    </RadioGroup>
+
+                </TableRow>
+
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginRight="3dp">
+
+                    <TextView    style="@style/survey"
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="3dp"
+                        android:layout_weight="1"
+                        android:background="@color/Fourth"
+                        android:lineSpacingExtra="10dp"
+                        android:text="5. 우측 상지"
+                        tools:layout_editor_absoluteX="16dp"
+                        tools:layout_editor_absoluteY="16dp" />
+
+                    <TextView    style="@style/survey"
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@color/Fourth"
+                        android:lineSpacingExtra="10dp"
+                        android:text="6. 좌측 상지"
+                        tools:layout_editor_absoluteX="16dp"
+                        tools:layout_editor_absoluteY="16dp" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp">
+
+                    <TextView
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="3dp"
+                        android:layout_weight="1"
+                        android:background="@color/Fourth"
+                        android:gravity="right"
+                        android:lineSpacingExtra="10dp"
+                        android:text="0 \t\t\t 1 \t\t\t 2 \t\t\t 3 \t\t\t 4\t "
+                        tools:layout_editor_absoluteX="16dp"
+                        tools:layout_editor_absoluteY="16dp" />
+
+                    <TextView
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@color/Fourth"
+                        android:gravity="right"
+                        android:lineSpacingExtra="10dp"
+                        android:text="0 \t\t\t 1 \t\t\t 2 \t\t\t 3 \t\t\t 4\t "
+                        tools:layout_editor_absoluteX="16dp"
+                        tools:layout_editor_absoluteY="16dp" />
+                </TableRow>
+
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp">
+
+                    <TextView    style="@style/survey"
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@color/Fourth"
+                        android:lineSpacingExtra="10dp"
+                        android:text="안정시"
+                        tools:layout_editor_absoluteX="16dp"
+                        tools:layout_editor_absoluteY="16dp" />
+
+                    <RadioGroup
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="3dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/crts5_1_0"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth" />
+
+                        <RadioButton
+                            android:id="@+id/crts5_1_1"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth" />
+
+                        <RadioButton
+                            android:id="@+id/crts5_1_2"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth" />
+
+                        <RadioButton
+                            android:id="@+id/crts5_1_3"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth" />
+
+                        <RadioButton
+                            android:id="@+id/crts5_1_4"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth" />
+                    </RadioGroup>
+
+
+                    <TextView    style="@style/survey"
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@color/Fourth"
+                        android:lineSpacingExtra="10dp"
+                        android:text="안정시"
+                        tools:layout_editor_absoluteX="16dp"
+                        tools:layout_editor_absoluteY="16dp" />
+
+                    <RadioGroup
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/crts6_1_0"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth" />
+
+                        <RadioButton
+                            android:id="@+id/crts6_1_1"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth" />
+
+                        <RadioButton
+                            android:id="@+id/crts6_1_2"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth" />
+
+                        <RadioButton
+                            android:id="@+id/crts6_1_3"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth" />
+
+                        <RadioButton
+                            android:id="@+id/crts6_1_4"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth" />
+                    </RadioGroup>
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp">
+
+                    <TextView    style="@style/survey"
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@color/Fourth"
+                        android:lineSpacingExtra="10dp"
+                        android:text="자세시"
+                        tools:layout_editor_absoluteX="16dp"
+                        tools:layout_editor_absoluteY="16dp" />
+
+
+                    <RadioGroup
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="3dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/crts5_2_0"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth" />
+
+                        <RadioButton
+                            android:id="@+id/crts5_2_1"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth" />
+
+                        <RadioButton
+                            android:id="@+id/crts5_2_2"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth" />
+
+                        <RadioButton
+                            android:id="@+id/crts5_2_3"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth" />
+
+                        <RadioButton
+                            android:id="@+id/crts5_2_4"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth" />
+                    </RadioGroup>
+
+                    <TextView    style="@style/survey"
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@color/Fourth"
+                        android:lineSpacingExtra="10dp"
+                        android:text="자세시"
+                        tools:layout_editor_absoluteX="16dp"
+                        tools:layout_editor_absoluteY="16dp" />
+
+
+                    <RadioGroup
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/crts6_2_0"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth" />
+
+                        <RadioButton
+                            android:id="@+id/crts6_2_1"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth" />
+
+                        <RadioButton
+                            android:id="@+id/crts6_2_2"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth" />
+
+                        <RadioButton
+                            android:id="@+id/crts6_2_3"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth" />
+
+                        <RadioButton
+                            android:id="@+id/crts6_2_4"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth" />
+                    </RadioGroup>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp">
+
+                    <TextView    style="@style/survey"
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_column="0"
+                        android:layout_weight="1"
+                        android:background="@color/Fourth"
+                        android:lineSpacingExtra="10dp"
+                        android:text="운동시"
+                        tools:layout_editor_absoluteX="16dp"
+                        tools:layout_editor_absoluteY="16dp" />
+
+
+                    <RadioGroup
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="3dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/crts5_3_0"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth" />
+
+                        <RadioButton
+                            android:id="@+id/crts5_3_1"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth" />
+
+                        <RadioButton
+                            android:id="@+id/crts5_3_2"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth" />
+
+                        <RadioButton
+                            android:id="@+id/crts5_3_3"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth" />
+
+                        <RadioButton
+                            android:id="@+id/crts5_3_4"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth" />
+                    </RadioGroup>
+
+                    <TextView    style="@style/survey"
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@color/Fourth"
+                        android:lineSpacingExtra="10dp"
+                        android:text="운동시"
+                        tools:layout_editor_absoluteX="16dp"
+                        tools:layout_editor_absoluteY="16dp" />
+
+
+                    <RadioGroup
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/crts6_3_0"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth" />
+
+                        <RadioButton
+                            android:id="@+id/crts6_3_1"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth" />
+
+                        <RadioButton
+                            android:id="@+id/crts6_3_2"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth" />
+
+                        <RadioButton
+                            android:id="@+id/crts6_3_3"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth" />
+
+                        <RadioButton
+                            android:id="@+id/crts6_3_4"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth" />
+                    </RadioGroup>
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginRight="3dp">
+
+                    <TextView    style="@style/survey"
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="3dp"
+                        android:layout_weight="1"
+                        android:background="@color/Fourth"
+                        android:lineSpacingExtra="10dp"
+                        android:text="7. 체간"
+                        tools:layout_editor_absoluteX="16dp"
+                        tools:layout_editor_absoluteY="16dp" />
+
+                    <TextView    style="@style/survey"
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@color/Fourth"
+                        android:lineSpacingExtra="10dp"
+                        android:text="8. 우측 하지"
+                        tools:layout_editor_absoluteX="16dp"
+                        tools:layout_editor_absoluteY="16dp" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp">
+
+                    <TextView
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="3dp"
+                        android:layout_weight="1"
+                        android:background="@color/Fourth"
+                        android:gravity="right"
+                        android:lineSpacingExtra="10dp"
+                        android:text="0 \t\t\t 1 \t\t\t 2 \t\t\t 3 \t\t\t 4\t "
+                        tools:layout_editor_absoluteX="16dp"
+                        tools:layout_editor_absoluteY="16dp" />
+
+                    <TextView
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@color/Fourth"
+                        android:gravity="right"
+                        android:lineSpacingExtra="10dp"
+                        android:text="0 \t\t\t 1 \t\t\t 2 \t\t\t 3 \t\t\t 4\t "
+                        tools:layout_editor_absoluteX="16dp"
+                        tools:layout_editor_absoluteY="16dp" />
+                </TableRow>
+
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp">
+
+                    <TextView    style="@style/survey"
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@color/Fourth"
+                        android:lineSpacingExtra="10dp"
+                        android:text="안정시"
+                        tools:layout_editor_absoluteX="16dp"
+                        tools:layout_editor_absoluteY="16dp" />
+
+                    <RadioGroup
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="3dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/crts7_1_0"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth" />
+
+                        <RadioButton
+                            android:id="@+id/crts7_1_1"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth" />
+
+                        <RadioButton
+                            android:id="@+id/crts7_1_2"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth" />
+
+                        <RadioButton
+                            android:id="@+id/crts7_1_3"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth" />
+
+                        <RadioButton
+                            android:id="@+id/crts7_1_4"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth" />
+                    </RadioGroup>
+
+
+                    <TextView    style="@style/survey"
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@color/Fourth"
+                        android:lineSpacingExtra="10dp"
+                        android:text="안정시"
+                        tools:layout_editor_absoluteX="16dp"
+                        tools:layout_editor_absoluteY="16dp" />
+
+                    <RadioGroup
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/crts8_1_0"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth" />
+
+                        <RadioButton
+                            android:id="@+id/crts8_1_1"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth" />
+
+                        <RadioButton
+                            android:id="@+id/crts8_1_2"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth" />
+
+                        <RadioButton
+                            android:id="@+id/crts8_1_3"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth" />
+
+                        <RadioButton
+                            android:id="@+id/crts8_1_4"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth" />
+                    </RadioGroup>
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp">
+
+                    <TextView    style="@style/survey"
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@color/Fourth"
+                        android:lineSpacingExtra="10dp"
+                        android:text="자세시"
+                        tools:layout_editor_absoluteX="16dp"
+                        tools:layout_editor_absoluteY="16dp" />
+
+
+                    <RadioGroup
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="3dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/crts7_2_0"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth" />
+
+                        <RadioButton
+                            android:id="@+id/crts7_2_1"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth" />
+
+                        <RadioButton
+                            android:id="@+id/crts7_2_2"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth" />
+
+                        <RadioButton
+                            android:id="@+id/crts7_2_3"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth" />
+
+                        <RadioButton
+                            android:id="@+id/crts7_2_4"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth" />
+                    </RadioGroup>
+
+                    <TextView    style="@style/survey"
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@color/Fourth"
+                        android:lineSpacingExtra="10dp"
+                        android:text="자세시"
+                        tools:layout_editor_absoluteX="16dp"
+                        tools:layout_editor_absoluteY="16dp" />
+
+
+                    <RadioGroup
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/crts8_2_0"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth" />
+
+                        <RadioButton
+                            android:id="@+id/crts8_2_1"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth" />
+
+                        <RadioButton
+                            android:id="@+id/crts8_2_2"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth" />
+
+                        <RadioButton
+                            android:id="@+id/crts8_2_3"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth" />
+
+                        <RadioButton
+                            android:id="@+id/crts8_2_4"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth" />
+                    </RadioGroup>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp">
+
+                    <TextView    style="@style/survey"
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_column="0"
+                        android:layout_weight="1"
+                        android:background="@color/Fourth"
+                        android:lineSpacingExtra="10dp"
+                        android:text="운동시"
+                        tools:layout_editor_absoluteX="16dp"
+                        tools:layout_editor_absoluteY="16dp" />
+
+
+                    <RadioGroup
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="3dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/crts7_3_0"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth" />
+
+                        <RadioButton
+                            android:id="@+id/crts7_3_1"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth" />
+
+                        <RadioButton
+                            android:id="@+id/crts7_3_2"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth" />
+
+                        <RadioButton
+                            android:id="@+id/crts7_3_3"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth" />
+
+                        <RadioButton
+                            android:id="@+id/crts7_3_4"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth" />
+                    </RadioGroup>
+
+                    <TextView    style="@style/survey"
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@color/Fourth"
+                        android:lineSpacingExtra="10dp"
+                        android:text="운동시"
+                        tools:layout_editor_absoluteX="16dp"
+                        tools:layout_editor_absoluteY="16dp" />
+
+
+                    <RadioGroup
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/crts8_3_0"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth" />
+
+                        <RadioButton
+                            android:id="@+id/crts8_3_1"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth" />
+
+                        <RadioButton
+                            android:id="@+id/crts8_3_2"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth" />
+
+                        <RadioButton
+                            android:id="@+id/crts8_3_3"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth" />
+
+                        <RadioButton
+                            android:id="@+id/crts8_3_4"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth" />
+                    </RadioGroup>
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginRight="3dp">
+
+                    <TextView    style="@style/survey"
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="3dp"
+                        android:layout_weight="1"
+                        android:background="@color/Fourth"
+                        android:lineSpacingExtra="10dp"
+                        android:text="9. 좌측 하지"
+                        tools:layout_editor_absoluteX="16dp"
+                        tools:layout_editor_absoluteY="16dp" />
+
+                    <TextView    style="@style/survey"
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@color/Fourth"
+                        android:lineSpacingExtra="10dp"
+                        android:text="8. 기립성"
+                        tools:layout_editor_absoluteX="16dp"
+                        tools:layout_editor_absoluteY="16dp" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp">
+
+                    <TextView
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="3dp"
+                        android:layout_weight="1"
+                        android:background="@color/Fourth"
+                        android:gravity="right"
+                        android:lineSpacingExtra="10dp"
+                        android:text="0 \t\t\t 1 \t\t\t 2 \t\t\t 3 \t\t\t 4\t "
+                        tools:layout_editor_absoluteX="16dp"
+                        tools:layout_editor_absoluteY="16dp" />
+
+                    <TextView
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@color/Fourth"
+                        android:gravity="right"
+                        android:lineSpacingExtra="10dp"
+                        android:text="0 \t\t\t 1 \t\t\t 2 \t\t\t 3 \t\t\t 4\t "
+                        tools:layout_editor_absoluteX="16dp"
+                        tools:layout_editor_absoluteY="16dp" />
+                </TableRow>
+
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp">
+
+                    <TextView    style="@style/survey"
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@color/Fourth"
+                        android:lineSpacingExtra="10dp"
+                        android:text="안정시"
+                        tools:layout_editor_absoluteX="16dp"
+                        tools:layout_editor_absoluteY="16dp" />
+
+                    <RadioGroup
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="3dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/crts9_1_0"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth" />
+
+                        <RadioButton
+                            android:id="@+id/crts9_1_1"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth" />
+
+                        <RadioButton
+                            android:id="@+id/crts9_1_2"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth" />
+
+                        <RadioButton
+                            android:id="@+id/crts9_1_3"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth" />
+
+                        <RadioButton
+                            android:id="@+id/crts9_1_4"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth" />
+                    </RadioGroup>
+
+
+                    <TextView    style="@style/survey"
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@color/Fourth"
+                        android:lineSpacingExtra="10dp"
+                        android:text="안정시"
+                        tools:layout_editor_absoluteX="16dp"
+                        tools:layout_editor_absoluteY="16dp" />
+
+                    <RadioGroup
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/crts10_1_0"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth" />
+
+                        <RadioButton
+                            android:id="@+id/crts10_1_1"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth" />
+
+                        <RadioButton
+                            android:id="@+id/crts10_1_2"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth" />
+
+                        <RadioButton
+                            android:id="@+id/crts10_1_3"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth" />
+
+                        <RadioButton
+                            android:id="@+id/crts10_1_4"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth" />
+                    </RadioGroup>
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp">
+
+                    <TextView    style="@style/survey"
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@color/Fourth"
+                        android:lineSpacingExtra="10dp"
+                        android:text="자세시"
+                        tools:layout_editor_absoluteX="16dp"
+                        tools:layout_editor_absoluteY="16dp" />
+
+
+                    <RadioGroup
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="3dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/crts9_2_0"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth" />
+
+                        <RadioButton
+                            android:id="@+id/crts9_2_1"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth" />
+
+                        <RadioButton
+                            android:id="@+id/crts9_2_2"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth" />
+
+                        <RadioButton
+                            android:id="@+id/crts9_2_3"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth" />
+
+                        <RadioButton
+                            android:id="@+id/crts9_2_4"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth" />
+                    </RadioGroup>
+
+                    <TextView    style="@style/survey"
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@color/Fourth"
+                        android:lineSpacingExtra="10dp"
+                        android:text="자세시"
+                        tools:layout_editor_absoluteX="16dp"
+                        tools:layout_editor_absoluteY="16dp" />
+
+
+                    <RadioGroup
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/crts10_2_0"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth" />
+
+                        <RadioButton
+                            android:id="@+id/crts10_2_1"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth" />
+
+                        <RadioButton
+                            android:id="@+id/crts10_2_2"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth" />
+
+                        <RadioButton
+                            android:id="@+id/crts10_2_3"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth" />
+
+                        <RadioButton
+                            android:id="@+id/crts10_2_4"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth" />
+                    </RadioGroup>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp">
+
+                    <TextView    style="@style/survey"
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_column="0"
+                        android:layout_weight="1"
+                        android:background="@color/Fourth"
+                        android:lineSpacingExtra="10dp"
+                        android:text="운동시"
+                        tools:layout_editor_absoluteX="16dp"
+                        tools:layout_editor_absoluteY="16dp" />
+
+
+                    <RadioGroup
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="3dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/crts9_3_0"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth" />
+
+                        <RadioButton
+                            android:id="@+id/crts9_3_1"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth" />
+
+                        <RadioButton
+                            android:id="@+id/crts9_3_2"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth" />
+
+                        <RadioButton
+                            android:id="@+id/crts9_3_3"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth" />
+
+                        <RadioButton
+                            android:id="@+id/crts9_3_4"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth" />
+                    </RadioGroup>
+
+                    <TextView    style="@style/survey"
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@color/Fourth"
+                        android:lineSpacingExtra="10dp"
+                        android:text="운동시"
+                        tools:layout_editor_absoluteX="16dp"
+                        tools:layout_editor_absoluteY="16dp" />
+
+
+                    <RadioGroup
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/crts10_3_0"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth" />
+
+                        <RadioButton
+                            android:id="@+id/crts10_3_1"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth" />
+
+                        <RadioButton
+                            android:id="@+id/crts10_3_2"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth" />
+
+                        <RadioButton
+                            android:id="@+id/crts10_3_3"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth" />
+
+                        <RadioButton
+                            android:id="@+id/crts10_3_4"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth" />
+                    </RadioGroup>
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginRight="3dp">
+
+                    <TextView    style="@style/survey"
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="3dp"
+                        android:layout_weight="1"
+                        android:background="@color/Fourth"
+                        android:lineSpacingExtra="10dp"
+                        android:text="11번 글씨기와 12-14 그리기는 task에서 검사"
+                        tools:layout_editor_absoluteX="16dp"
+                        tools:layout_editor_absoluteY="16dp" />
+                </TableRow>
+
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="3dp">
+
+                    <TextView    style="@style/survey"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="1dp"
+                        android:layout_weight="3"
+                        android:background="@color/Fourth"
+                        android:lineSpacingExtra="10dp"
+                        android:text="@string/crts_b_15"
+                        tools:layout_editor_absoluteX="16dp"
+                        tools:layout_editor_absoluteY="16dp" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp">
+
+                    <TextView
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="3dp"
+                        android:layout_weight="1"
+                        android:background="@color/Fourth"
+                        android:gravity="right"
+                        android:lineSpacingExtra="10dp"
+                        android:text="0 \t\t\t 1 \t\t\t 2 \t\t\t 3 \t\t\t 4\t "
+                        tools:layout_editor_absoluteX="16dp"
+                        tools:layout_editor_absoluteY="16dp" />
+
+                    <TextView
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@color/Fourth"
+                        android:gravity="right"
+                        android:lineSpacingExtra="10dp"
+                        android:text="0 \t\t\t 1 \t\t\t 2 \t\t\t 3 \t\t\t 4\t "
+                        tools:layout_editor_absoluteX="16dp"
+                        tools:layout_editor_absoluteY="16dp" />
+                </TableRow>
+
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp">
+
+                    <TextView    style="@style/survey"
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_column="0"
+                        android:layout_weight="1"
+                        android:background="@color/Fourth"
+                        android:lineSpacingExtra="10dp"
+                        android:text=" 우 "
+                        tools:layout_editor_absoluteX="16dp"
+                        tools:layout_editor_absoluteY="16dp" />
+
+
+                    <RadioGroup
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="3dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/crts15_1_0"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth" />
+
+                        <RadioButton
+                            android:id="@+id/crts15_1_1"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth" />
+
+                        <RadioButton
+                            android:id="@+id/crts15_1_2"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth" />
+
+                        <RadioButton
+                            android:id="@+id/crts15_1_3"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth" />
+
+                        <RadioButton
+                            android:id="@+id/crts15_1_4"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth" />
+                    </RadioGroup>
+
+                    <TextView    style="@style/survey"
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@color/Fourth"
+                        android:lineSpacingExtra="10dp"
+                        android:text=" 좌 "
+                        tools:layout_editor_absoluteX="16dp"
+                        tools:layout_editor_absoluteY="16dp" />
+
+
+                    <RadioGroup
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/crts15_2_0"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth" />
+
+                        <RadioButton
+                            android:id="@+id/crts15_2_1"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth" />
+
+                        <RadioButton
+                            android:id="@+id/crts15_2_2"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth" />
+
+                        <RadioButton
+                            android:id="@+id/crts15_2_3"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth" />
+
+                        <RadioButton
+                            android:id="@+id/crts15_2_4"
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth" />
+                    </RadioGroup>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="3dp">
+
+                    <TextView    style="@style/survey"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="1dp"
+                        android:layout_weight="3"
+                        android:background="@color/Fourth"
+                        android:lineSpacingExtra="10dp"
+                        android:text="@string/crts_c_16"
+                        tools:layout_editor_absoluteX="16dp"
+                        tools:layout_editor_absoluteY="16dp" />
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <RadioButton
+                            android:id="@+id/crts16_0"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth"
+                            android:text="0" />
+
+                        <RadioButton
+                            android:id="@+id/crts16_1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth"
+                            android:text="1" />
+
+                        <RadioButton
+                            android:id="@+id/crts16_2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth"
+                            android:text="2" />
+
+                        <RadioButton
+                            android:id="@+id/crts16_3"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth"
+                            android:text="3" />
+
+                        <RadioButton
+                            android:id="@+id/crts16_4"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth"
+                            android:text="4" />
+                    </RadioGroup>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="3dp">
+
+                    <TextView    style="@style/survey"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="1dp"
+                        android:layout_weight="3"
+                        android:background="@color/Fourth"
+                        android:lineSpacingExtra="10dp"
+                        android:text="@string/crts_c_17"
+                        tools:layout_editor_absoluteX="16dp"
+                        tools:layout_editor_absoluteY="16dp" />
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <RadioButton
+                            android:id="@+id/crts17_0"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth"
+                            android:text="0" />
+
+                        <RadioButton
+                            android:id="@+id/crts17_1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth"
+                            android:text="1" />
+
+                        <RadioButton
+                            android:id="@+id/crts17_2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth"
+                            android:text="2" />
+
+                        <RadioButton
+                            android:id="@+id/crts17_3"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth"
+                            android:text="3" />
+
+                        <RadioButton
+                            android:id="@+id/crts17_4"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth"
+                            android:text="4" />
+                    </RadioGroup>
+                </TableRow>
+
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="3dp">
+
+                    <TextView    style="@style/survey"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="1dp"
+                        android:layout_weight="3"
+                        android:background="@color/Fourth"
+                        android:lineSpacingExtra="10dp"
+                        android:text="@string/crts_c_18"
+                        tools:layout_editor_absoluteX="16dp"
+                        tools:layout_editor_absoluteY="16dp" />
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <RadioButton
+                            android:id="@+id/crts18_0"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth"
+                            android:text="0" />
+
+                        <RadioButton
+                            android:id="@+id/crts18_1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth"
+                            android:text="1" />
+
+                        <RadioButton
+                            android:id="@+id/crts18_2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth"
+                            android:text="2" />
+
+                        <RadioButton
+                            android:id="@+id/crts18_3"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth"
+                            android:text="3" />
+
+                        <RadioButton
+                            android:id="@+id/crts18_4"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth"
+                            android:text="4" />
+                    </RadioGroup>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="3dp">
+
+                    <TextView    style="@style/survey"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="1dp"
+                        android:layout_weight="3"
+                        android:background="@color/Fourth"
+                        android:lineSpacingExtra="10dp"
+                        android:text="@string/crts_c_19"
+                        tools:layout_editor_absoluteX="16dp"
+                        tools:layout_editor_absoluteY="16dp" />
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <RadioButton
+                            android:id="@+id/crts19_0"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth"
+                            android:text="0" />
+
+                        <RadioButton
+                            android:id="@+id/crts19_1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth"
+                            android:text="1" />
+
+                        <RadioButton
+                            android:id="@+id/crts19_2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth"
+                            android:text="2" />
+
+                        <RadioButton
+                            android:id="@+id/crts19_3"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth"
+                            android:text="3" />
+
+                        <RadioButton
+                            android:id="@+id/crts19_4"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth"
+                            android:text="4" />
+                    </RadioGroup>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="3dp">
+
+                    <TextView    style="@style/survey"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="1dp"
+                        android:layout_weight="3"
+                        android:background="@color/Fourth"
+                        android:lineSpacingExtra="10dp"
+                        android:text="@string/crts_c_20"
+                        tools:layout_editor_absoluteX="16dp"
+                        tools:layout_editor_absoluteY="16dp" />
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <RadioButton
+                            android:id="@+id/crts20_0"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth"
+                            android:text="0" />
+
+                        <RadioButton
+                            android:id="@+id/crts20_1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth"
+                            android:text="1" />
+
+                        <RadioButton
+                            android:id="@+id/crts20_2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth"
+                            android:text="2" />
+
+                        <RadioButton
+                            android:id="@+id/crts20_3"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth"
+                            android:text="3" />
+
+                        <RadioButton
+                            android:id="@+id/crts20_4"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth"
+                            android:text="4" />
+                    </RadioGroup>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="3dp">
+
+                    <TextView    style="@style/survey"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="1dp"
+                        android:layout_weight="3"
+                        android:background="@color/Fourth"
+                        android:lineSpacingExtra="10dp"
+                        android:text="@string/crts_c_21"
+                        tools:layout_editor_absoluteX="16dp"
+                        tools:layout_editor_absoluteY="16dp" />
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <RadioButton
+                            android:id="@+id/crts21_0"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth"
+                            android:text="0" />
+
+                        <RadioButton
+                            android:id="@+id/crts21_1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth"
+                            android:text="1" />
+
+                        <RadioButton
+                            android:id="@+id/crts21_2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth"
+                            android:text="2" />
+
+                        <RadioButton
+                            android:id="@+id/crts21_3"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth"
+                            android:text="3" />
+
+                        <RadioButton
+                            android:id="@+id/crts21_4"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth"
+                            android:text="4" />
+                    </RadioGroup>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="3dp">
+
+                    <TextView    style="@style/survey"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="1dp"
+                        android:layout_weight="3"
+                        android:background="@color/Fourth"
+                        android:lineSpacingExtra="10dp"
+                        android:text="@string/crts_c_22"
+                        tools:layout_editor_absoluteX="16dp"
+                        tools:layout_editor_absoluteY="16dp" />
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <RadioButton
+                            android:id="@+id/crts22_0"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth"
+                            android:text="0" />
+
+                        <RadioButton
+                            android:id="@+id/crts22_1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth"
+                            android:text="1" />
+
+                        <RadioButton
+                            android:id="@+id/crts22_2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth"
+                            android:text="2" />
+
+                        <RadioButton
+                            android:id="@+id/crts22_3"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth"
+                            android:text="3" />
+
+                        <RadioButton
+                            android:id="@+id/crts22_4"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth"
+                            android:text="4" />
+                    </RadioGroup>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="3dp">
+
+                    <TextView    style="@style/survey"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="1dp"
+                        android:layout_weight="3"
+                        android:background="@color/Fourth"
+                        android:lineSpacingExtra="10dp"
+                        android:text="@string/crts_c_23"
+                        tools:layout_editor_absoluteX="16dp"
+                        tools:layout_editor_absoluteY="16dp" />
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <RadioButton
+                            android:id="@+id/crts23_0"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth"
+                            android:text="0" />
+
+                        <RadioButton
+                            android:id="@+id/crts23_1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth"
+                            android:text="1" />
+
+                        <RadioButton
+                            android:id="@+id/crts23_2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth"
+                            android:text="2" />
+
+                        <RadioButton
+                            android:id="@+id/crts23_3"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth"
+                            android:text="3" />
+
+                        <RadioButton
+                            android:id="@+id/crts23_4"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="1dp"
+                            android:layout_weight="1"
+                            android:background="@color/Fourth"
+                            android:text="4" />
+                    </RadioGroup>
+                </TableRow>
+            </TableLayout>
+
+        </ScrollView>
+
+        <TextView   
+            android:id="@+id/session2title"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@color/Secondary"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="임장 진전 평가 척도 Part 1(CRTS)"
+            android:textAlignment="center"
+            android:textColor="@color/Background"
+            android:textSize="20dp" />
+
+    </RelativeLayout>
 </FrameLayout>

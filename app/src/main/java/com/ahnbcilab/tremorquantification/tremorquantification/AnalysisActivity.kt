@@ -28,9 +28,11 @@ class AnalysisActivity : AppCompatActivity() {
 
         var result = main.main("${this.filesDir.path}/testData/$filename")
         dialog.dismiss()
-        val intent = Intent(this, ResultActivity::class.java)
+        val intent = Intent(this, SpiralResultActivity::class.java)
         intent.putExtra("result", result)
         startActivity(intent)
         finish()
     }
+
+
 }
